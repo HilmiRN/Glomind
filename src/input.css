@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+/* import font */
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Unbounded:wght@200..900&display=swap");
+
+/* 1. CONFIG DESAIN TOKENS (@theme)*/
+@theme {
+  /* color */
+  --color-nila: #2f4c8a;
+  --color-biru-aksen: #5b80be;
+  --color-biru-muda: #c9daf2;
+  --color-biru-pucat: #d6e4f7;
+  --color-pasir: #f2d2ae;
+  --color-matahari: #fbe3b5;
+  --color-bukit: #d98b5f;
+  --color-terakota: #b4562c;
+  --color-krem: #f5eee4;
+  --color-krem-tua: #efe6d8;
+  --color-hijau: #1f7a5a;
+
+  /* font */
+  --font-unbounded: "Unbounded", "Figtree", sans-serif;
+  --font-figtree: "Figtree", sans-serif;
+}
+/* apply */
+.btn {
+  @apply flex px-6 py-3.75 rounded-full gap-2.5 text-white font-bold text-sm  bg-nila hover:bg-[#24407a] focus:border focus:border-biru-aksen;
+}
+.btn2 {
+  @apply flex items-center gap-1 border border-nila/35 px-6 py-3.75 rounded-full;
+}

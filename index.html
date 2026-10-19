@@ -8,34 +8,371 @@
     <link rel="icon" type="image/x-icon" href="" />
     <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
   </head>
-  <body>
-    <main class="bg-biru-aksen h-screen">
+  <body class="bg-krem">
+    <!-- <header
+      class="sticky top-10 mx-auto z-50 flex items-center justify-between gap-2 rounded-full px-10"
+    >
+      <i
+        class="ph ph-chat-circle-dots text-white rounded-xl p-3 bg-nila text-3xl"
+      ></i>
+      <img src="./src/assets/logo.svg" alt="" />
+      <nav class="hidden items-center gap-1">
+        <a
+          href="#"
+          class="flex flex-col items-center gap-1 rounded-full bg-nila px-4 py-2 text-white"
+        >
+          <span>Home</span>
+          <i class="ph-fill ph-circle text-[10px] text-matahari"></i>
+        </a>
+        <a href="#" class="h-fit px-4 py-2 text-nila/75 font-bold"
+          >Situations</a
+        >
+        <a href="#" class="h-fit px-4 py-2 text-nila/75 font-bold">Practice</a>
+        <a href="#" class="h-fit px-4 py-2 text-nila/75 font-bold">Culture</a>
+        <a href="#" class="h-fit px-4 py-2 text-nila/75 font-bold">About</a>
+      </nav>
+      <div class="flex justify-center items-center gap-2.5">
+        <div class="btn2">
+          <i class="ph ph-globe"></i>
+          <p class="uppercase">en</p>
+        </div>
+        <div class="inline-flex btn">
+          <p>menu</p>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.33301 6.66699H16.6663M3.33301 13.3337H11.6663"
+              stroke-width="1.83333"
+              stroke-linecap="round"
+              stroke="white"
+            />
+          </svg>
+        </div>
+      </div>
+      <a href="#" class="hidden btn">
+        <p>Ask Gali</p>
+      </a>
+    </header> -->
+    <!-- after scroll header -->
+    <!-- <header class="sticky top-10 mx-auto z-50 flex w-fit items-center justify-center gap-2 rounded-full bg-white/85 p-2">
+<div id="chatbot" class="h-full">
+  <i class="ph ph-chat-circle-dots text-3xl"></i>
+</div>
 
-<header class="sticky top-10 mx-auto z-50 flex w-fit items-center justify-center gap-2 rounded-full bg-white/85 p-2">
-  <div id="chatbot" class="h-full">
-    <i class="ph ph-chat-circle-dots text-3xl"></i>
-  </div>
-
-  <nav class="flex items-center gap-1">
-    <a href="#" class="flex flex-col items-center gap-1 rounded-full bg-nila px-4 py-2 text-white">
-      <span>Home</span>
-      <i class="ph-fill ph-circle text-[10px] text-matahari"></i>
-    </a>
-    <a href="#" class="h-fit px-4 py-2 text-nila/75 font-bold">Situations</a>
-    <a href="#" class="h-fit px-4 py-2 text-nila/75 font-bold">Practice</a>
-    <a href="#" class="h-fit px-4 py-2 text-nila/75 font-bold">Culture</a>
-    <a href="#" class="h-fit px-4 py-2 text-nila/75 font-bold">About</a>
-  </nav>
-
-  <div class="btn2">
-    <i class="ph ph-globe"></i>
-    <p class="uppercase">en</p>
-  </div>
-
-  <a href="#" class="btn">
-    <p>Ask Gali</p>
+<nav class="flex items-center gap-1">
+  <a href="#" class="flex flex-col items-center gap-1 rounded-full bg-nila px-4 py-2 text-white">
+    <span>Home</span>
+    <i class="ph-fill ph-circle text-[10px] text-matahari"></i>
   </a>
-</header>
-  </main>
+  <a href="#" class="h-fit px-4 py-2 text-nila/75 font-bold">Situations</a>
+  <a href="#" class="h-fit px-4 py-2 text-nila/75 font-bold">Practice</a>
+  <a href="#" class="h-fit px-4 py-2 text-nila/75 font-bold">Culture</a>
+  <a href="#" class="h-fit px-4 py-2 text-nila/75 font-bold">About</a>
+</nav>
+
+<div class="btn2">
+  <i class="ph ph-globe"></i>
+  <p class="uppercase">en</p>
+</div>
+
+<a href="#" class="btn">
+  <p>Ask Gali</p>
+</a>
+</header> -->
+    <main class="">
+      <section
+        class="relative w-fill h-[90vh] isolate m-10 overflow-hidden rounded-[clamp(24px,3.5vw,48px)] bg-pasir max-sm:aspect-auto max-sm:min-h-180 max-sm:m-5"
+      >
+        <!-- background hero -->
+        <svg
+          viewBox="0 0 1360 930"
+          role="img"
+          class="absolute bottom-0 left-1/2 z-0 h-auto w-[max(100%,900px)] -translate-x-1/2"
+        >
+          <defs>
+            <clipPath id="mouth">
+              <path
+                d="M641 741Q680 752 719 741Q716 772 680 773Q644 772 641 741Z"
+              />
+            </clipPath>
+          </defs>
+
+          <!-- langit -->
+          <circle cx="680" cy="740" r="330" class="fill-matahari" />
+          <circle
+            cx="680"
+            cy="730"
+            r="430"
+            fill="none"
+            stroke-width="2"
+            stroke-dasharray="9 15"
+            class="stroke-krem"
+          />
+          <g class="fill-krem/60">
+            <rect x="104" y="340" width="180" height="44" rx="22" />
+            <rect x="164" y="370" width="120" height="44" rx="22" />
+            <rect x="1068" y="300" width="196" height="44" rx="22" />
+            <rect x="1134" y="330" width="130" height="44" rx="22" />
+          </g>
+
+          <!-- bukit pasir -->
+          <path
+            class="fill-[#e6b084] motion-safe:animate-dune-a"
+            d="M-200 760C-100 720 -50 710 0 750C120 705 220 685 300 692C400 703 450 752 560 772L800 772C900 742 1000 696 1100 708C1200 720 1300 764 1360 752C1420 740 1480 765 1560 750L1560 930L-200 930Z"
+          />
+          <path
+            class="fill-bukit motion-safe:animate-dune-b"
+            d="M-200 860C-120 835 -50 825 0 848C120 815 260 805 380 822C480 836 560 870 680 872C800 872 870 826 960 826C1080 826 1200 842 1360 834C1420 828 1480 842 1560 834L1560 930L-200 930Z"
+          />
+
+          <!-- badan -->
+          <path
+            class="fill-[#ff6b4a]"
+            d="M528 930C540 882 580 852 622 846L740 846C790 852 818 884 838 930Z"
+          />
+          <path class="fill-krem" d="M640 846L720 846L702 930L658 930Z" />
+          <path
+            class="fill-terakota"
+            d="M618 862L660 880L664 912Z M742 862L700 880L696 912Z"
+          />
+          <path
+            class="fill-[#ff6b4a]"
+            d="M838 762L882 758C886 832 872 892 836 930L792 930C818 890 836 832 838 762Z"
+          />
+          <path
+            d="M846 822L802 906"
+            fill="none"
+            stroke-width="14"
+            stroke-linecap="round"
+            class="stroke-terakota"
+          />
+
+          <!-- leher + headphone -->
+          <rect
+            x="650"
+            y="780"
+            width="60"
+            height="80"
+            rx="10"
+            class="fill-bukit"
+          />
+          <path
+            d="M641 788Q680 812 719 788L719 796Q680 822 641 796Z"
+            class="fill-terakota"
+          />
+          <path
+            d="M600 840Q640 884 680 884Q720 884 760 840"
+            fill="none"
+            stroke-width="14"
+            stroke-linecap="round"
+            class="stroke-nila"
+          />
+          <rect
+            x="584"
+            y="812"
+            width="36"
+            height="54"
+            rx="12"
+            class="fill-nila"
+          />
+          <rect
+            x="742"
+            y="812"
+            width="36"
+            height="54"
+            rx="12"
+            class="fill-nila"
+          />
+          <circle cx="601" cy="839" r="7" class="fill-[#ffd23f]" />
+          <circle cx="760" cy="839" r="7" class="fill-[#ffd23f]" />
+
+          <!-- kepala -->
+          <ellipse cx="577" cy="690" rx="17" ry="24" class="fill-bukit" />
+          <ellipse cx="785" cy="690" rx="17" ry="24" class="fill-[#b87d54]" />
+          <ellipse cx="681" cy="686" rx="104" ry="112" class="fill-[#b87d54]" />
+          <ellipse cx="672" cy="686" rx="98" ry="112" class="fill-bukit" />
+
+          <g id="rambut-kribo">
+            <!-- Bentuk Utama Rambut (Kumpulan Bulat-Bulat) -->
+            <g class="fill-[#1b1b2f]">
+              <!-- Lingkaran Luar (Membentuk Tekstur Kribo) -->
+              <!-- Mahkota Atas -->
+              <circle cx="680" cy="525" r="32" />
+              <circle cx="645" cy="535" r="30" />
+              <circle cx="715" cy="535" r="30" />
+              <circle cx="615" cy="552" r="28" />
+              <circle cx="745" cy="552" r="28" />
+
+              <!-- Samping Kiri -->
+              <circle cx="588" cy="580" r="28" />
+              <circle cx="572" cy="612" r="26" />
+              <circle cx="575" cy="640" r="22" />
+
+              <!-- Samping Kanan -->
+              <circle cx="772" cy="580" r="28" />
+              <circle cx="788" cy="612" r="26" />
+              <circle cx="785" cy="640" r="22" />
+
+              <!-- Isi Tengah & Batas Poni (Dinaikkan Agar Dahi Tidak Tertutup) -->
+              <circle cx="680" cy="565" r="45" />
+              <circle cx="625" cy="590" r="38" />
+              <circle cx="735" cy="590" r="38" />
+              <circle cx="680" cy="596" r="30" />
+
+              <!-- Cambang Kiri & Kanan -->
+              <path d="M 572 640 Q 570 662 578 668 Q 582 652 584 638 Z" />
+              <path d="M 788 640 Q 790 662 782 668 Q 778 652 776 638 Z" />
+            </g>
+
+            <!-- Sorotan / Highlight Cahaya (Bulat-Bulat Terang) -->
+            <g class="fill-[#3a3a5c]">
+              <circle cx="635" cy="545" r="10" />
+              <circle cx="695" cy="535" r="10" />
+              <circle cx="735" cy="555" r="9" />
+              <circle cx="602" cy="578" r="8" />
+            </g>
+          </g>
+
+          <g
+            fill="none"
+            stroke-width="9"
+            stroke-linecap="round"
+            class="stroke-[#1b1b30]"
+          >
+            <path d="M626 650L662 646" />
+            <path d="M700 645L736 651" />
+          </g>
+          <ellipse cx="642" cy="682" rx="11" ry="15" class="fill-[#1b1b30]" />
+          <ellipse cx="717" cy="682" rx="11" ry="15" class="fill-[#1b1b30]" />
+          <circle cx="646" cy="676" r="3.5" class="fill-krem" />
+          <circle cx="721" cy="676" r="3.5" class="fill-krem" />
+          <path
+            d="M679 690C672 705 676 718 686 722"
+            fill="none"
+            stroke-width="4"
+            stroke-linecap="round"
+            class="stroke-terakota"
+          />
+          <ellipse cx="617" cy="716" rx="17" ry="8" class="fill-[#e0836b]" />
+          <ellipse cx="743" cy="716" rx="17" ry="8" class="fill-[#e0836b]" />
+
+          <path
+            d="M641 741Q680 752 719 741Q716 772 680 773Q644 772 641 741Z"
+            class="fill-[#5b1b1b]"
+          />
+          <g clip-path="url(#mouth)">
+            <ellipse cx="680" cy="770" rx="15" ry="9" class="fill-[#ff6b4a]" />
+            <path
+              d="M641 741Q680 752 719 741L717 750Q680 760 643 750Z"
+              class="fill-krem"
+            />
+          </g>
+
+          <!-- tangan melambai -->
+          <g class="origin-bottom transform-fill motion-safe:animate-wave">
+            <g class="fill-bukit">
+              <ellipse
+                cx="822"
+                cy="738"
+                rx="14"
+                ry="24"
+                transform="rotate(-50 822 738)"
+              />
+              <rect x="836" y="666" width="14" height="60" rx="7" />
+              <rect x="851" y="657" width="14" height="64" rx="7" />
+              <rect x="866" y="660" width="14" height="62" rx="7" />
+              <rect x="880" y="676" width="14" height="52" rx="7" />
+              <ellipse cx="862" cy="726" rx="33" ry="34" />
+            </g>
+            <path
+              d="M848 742Q860 752 874 742"
+              fill="none"
+              stroke-width="3"
+              stroke-linecap="round"
+              class="stroke-terakota"
+            />
+          </g>
+          <path
+            d="M870 610Q888 620 886 636Q900 646 903 665"
+            fill="none"
+            stroke-width="6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="stroke-[#ffd23f]"
+          />
+
+          <!-- balon ucapan -->
+          <g transform="rotate(-8 974 575)">
+            <rect
+              x="887"
+              y="545"
+              width="175"
+              height="60"
+              rx="30"
+              class="fill-krem"
+            />
+            <text
+              x="974"
+              y="576"
+              text-anchor="middle"
+              dominant-baseline="middle"
+              class="fill-nila text-xl font-bold"
+            >
+              Halo, aku Gali!
+            </text>
+          </g>
+          <g transform="rotate(8 385 723)">
+            <rect
+              x="280"
+              y="690"
+              width="210"
+              height="66"
+              rx="33"
+              class="fill-biru-pucat"
+            />
+            <text
+              x="385"
+              y="723"
+              text-anchor="middle"
+              dominant-baseline="middle"
+              class="fill-nila text-xl font-bold"
+            >
+              Berapa harganya?
+            </text>
+          </g>
+          <g transform="rotate(5 995 730)">
+            <rect
+              x="912"
+              y="702"
+              width="166"
+              height="56"
+              rx="28"
+              class="fill-krem"
+            />
+            <text
+              x="995"
+              y="731"
+              text-anchor="middle"
+              dominant-baseline="middle"
+              class="fill-nila text-xl font-bold"
+            >
+              Matur nuwun
+            </text>
+          </g>
+        </svg>
+        <!-- background clear -->
+        <h1>TALK LIKE THE LOCALS DO</h1>
+        <p>Real phrases. Real places. Real manners.</p>
+        <div>
+          <a href="#" class="btn">Start exploring</a
+          ><a href="#">Chat with Gali</a>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

@@ -21,10 +21,43 @@
   /* font */
   --font-unbounded: "Unbounded", "Figtree", sans-serif;
   --font-figtree: "Figtree", sans-serif;
+
+  --animate-wave: wave 2s ease-in-out infinite;
+  --animate-dune-a: dune-a 7s ease-in-out infinite;
+  --animate-dune-b: dune-b 9s ease-in-out infinite;
+  @keyframes dune-a {
+    0%,
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(-25px) translateY(5px);
+    }
+  }
+
+  @keyframes dune-b {
+    0%,
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(20px) translateY(-4px);
+    }
+  }
+
+  @keyframes wave {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(12deg);
+    }
+  }
 }
 /* apply */
 .btn {
-  @apply flex px-6 py-3.75 rounded-full gap-2.5 text-white font-bold text-sm  bg-nila hover:bg-[#24407a] focus:border focus:border-biru-aksen;
+  @apply px-6 py-3.75 rounded-full gap-2.5 text-white font-bold text-sm  bg-nila hover:bg-[#24407a] focus:border focus:border-biru-aksen;
 }
 .btn2 {
   @apply flex items-center gap-1 border border-nila/35 px-6 py-3.75 rounded-full;

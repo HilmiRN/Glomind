@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-/* import font */
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Unbounded:wght@200..900&display=swap");
-
 /* 1. CONFIG DESAIN TOKENS (@theme)*/
 @theme {
   /* color */
@@ -57,8 +54,8 @@
 }
 /* apply */
 .btn {
-  @apply px-6 py-3.75 rounded-full gap-2.5 text-white font-bold text-sm  bg-nila hover:bg-[#24407a] focus:border focus:border-biru-aksen;
+  @apply px-6 py-3.75 rounded-full gap-2.5 text-white font-semibold text-lg  bg-nila hover:bg-[#24407a] focus:border focus:border-biru-aksen transition-all duration-300;
 }
 .btn2 {
-  @apply flex items-center gap-1 border border-nila/35 px-6 py-3.75 rounded-full;
+  @apply flex gap-2.5 px-6 py-3.75 border-0.5 items-center border bg-white text-nila transition-all duration-300 hover:bg-krem-tua font-semibold text-lg border-nila/35 rounded-full focus:border focus:border-biru-aksen;
 }

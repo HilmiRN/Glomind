@@ -90,9 +90,9 @@
         <p>Ask Gali</p>
       </a>
     </header> -->
-    <main>
+    <main class="p-10">
       <section
-        class="relative w-[calc(100vw-80px)] h-[calc(100vh-60px)] isolate m-10 mb-5 overflow-hidden rounded-[clamp(24px,3.5vw,48px)] bg-pasir max-sm:aspect-auto max-sm:min-h-180 max-sm:m-5 flex justify-center items-start"
+        class="relative w-[calc(100vw-80px)] h-[calc(100vh-60px)] isolate mb-5 overflow-hidden rounded-[clamp(24px,3.5vw,48px)] bg-pasir flex justify-center items-start"
       >
         <!-- background hero -->
         <svg
@@ -363,8 +363,141 @@
           </div>
         </div>
       </section>
-      <section>
-        
+      <section class="mt-25">
+        <hgroup class="flex justify-between items-end">
+          <div class="flex flex-col">
+            <p
+              class="px-3.5 py-1.75 bg-biru-aksen/25 rounded-full w-fit font-semibold tracking-wide text-nila text-sm"
+            >
+              SITUATIONS
+            </p>
+            <h2 class="text-nila text-[52px] font-semibold tracking-[-0.52px]">
+              Find your
+              <span class="text-biru-aksen font-unbounded font-black"
+                >SITUATION</span
+              >
+            </h2>
+            <p class="text-lg text-nila/80 font-medium">
+              Pick where you are. Gali brings the phrases you need there.
+            </p>
+          </div>
+          <a
+            href="#"
+            class="flex px-5 py-3 items-center gap-2 rounded-full border-[1.5px] border-nila/50 text-nila font-semibold w-fit"
+            >See all 6 situations<i class="ph-bold ph-arrow-right"></i
+          ></a>
+        </hgroup>
+        <div
+          class="my-10 grid w-full max-w-340 gap-6 grid-cols-[2fr_1fr_1fr] grid-rows-[1fr_1fr]"
+        >
+          <!-- most popular card -->
+          <div
+            class="h-fit relative overflow-hidden rounded-4xl bg-terakota p-10 text-white row-span-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="292"
+              height="271"
+              viewBox="0 0 292 271"
+              fill="none"
+              stroke="currentColor"
+              class="absolute bottom-0 right-0 text-white/14 z-0"
+            >
+              <path
+                d="M40.3747 164.325C33.7579 161.986 27.6777 158.186 22.6204 153.129C13.7125 144.221 8.70801 132.139 8.70801 119.542V87.8749L40.3747 8.70825H262.041L293.708 87.8749V119.542C293.708 132.139 288.704 144.221 279.796 153.129C274.738 158.186 268.658 161.986 262.041 164.325M8.70801 87.8749H293.708M262.041 164.325C257.003 166.106 251.654 167.042 246.208 167.042C233.61 167.042 221.528 162.037 212.62 153.129C203.712 144.221 198.708 132.139 198.708 119.542C198.708 132.139 193.704 144.221 184.796 153.129C175.888 162.037 163.806 167.042 151.208 167.042C138.61 167.042 126.528 162.037 117.62 153.129C108.712 144.221 103.708 132.139 103.708 119.542C103.708 132.139 98.7036 144.221 89.7956 153.129C80.8876 162.037 68.8058 167.042 56.208 167.042C50.7622 167.042 45.4129 166.106 40.3747 164.325M262.041 164.325V262.042H40.3747V164.325M262.041 164.325V151.208M40.3747 164.325V151.208"
+                stroke-width="17.4167"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div class="relative">
+              <div class="flex items-center justify-between gap-4">
+                <span
+                  class="rounded-full bg-white/20 px-3 py-1.25 text-[13px] font-bold leading-4.5"
+                  >Most popular</span
+                >
+                <span class="text-sm font-medium"
+                  >8 phrases · ID &amp; Sunda</span
+                >
+              </div>
+
+              <h2
+                class="font-unbounded font-black mt-6 text-[52px] tracking-[-1.68px]"
+              >
+                WARUNG
+              </h2>
+
+              <p class="mt-3 max-w-120 text-[17px] leading-6.5">
+                Buying snacks, asking prices, and saying thanks at a small local
+                shop.
+              </p>
+
+              <ul class="mt-4.75 space-y-3">
+                <li
+                  class="flex h-17 items-center justify-between rounded-[20px] bg-white pl-4.5 pr-3.5"
+                >
+                  <div>
+                    <p class="text-lg font-semibold leading-6 text-nila">
+                      Berapa harganya?
+                    </p>
+                    <p class="text-[13px] leading-4.5 text-nila/65">
+                      How much is this?
+                    </p>
+                  </div>
+                  <button
+                    class="grid size-11 shrink-0 place-items-center rounded-full bg-nila text-white transition hover:scale-110"
+                  >
+                    <i class="ph-fill ph-play"></i>
+                  </button>
+                </li>
+
+                <li
+                  class="flex h-17 items-center justify-between rounded-[20px] bg-white pl-4.5 pr-3.5"
+                >
+                  <div>
+                    <p class="text-lg font-semibold leading-6 text-nila">
+                      Boleh kurang?
+                    </p>
+                    <p class="text-[13px] leading-4.5 text-nila/65">
+                      Can it be cheaper?
+                    </p>
+                  </div>
+                  <button
+                    class="grid size-11 shrink-0 place-items-center rounded-full bg-nila text-white transition hover:scale-110"
+                  >
+                    <i class="ph-fill ph-play"></i>
+                  </button>
+                </li>
+
+                <li
+                  class="flex h-17 items-center justify-between rounded-[20px] bg-white pl-4.5 pr-3.5"
+                >
+                  <div>
+                    <p class="text-lg font-semibold leading-6 text-nila">
+                      Terima kasih, Bu!
+                    </p>
+                    <p class="text-[13px] leading-4.5 text-nila/65">
+                      Thank you, ma’am!
+                    </p>
+                  </div>
+                  <button
+                    class="grid size-11 shrink-0 place-items-center rounded-full bg-nila text-white transition hover:scale-110"
+                  >
+                    <i class="ph-fill ph-play"></i>
+                  </button>
+                </li>
+              </ul>
+
+              <a
+                href="#"
+                class="mt-4 inline-flex h-11 items-center gap-2.5 rounded-full border border-white/60 px-5 text-sm font-semibold transition hover:bg-white hover:text-warung focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              >
+                Open Warung
+                <i class="ph-bold ph-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </body>

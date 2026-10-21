@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gaulindo || Homepage</title>
+    <title>Gaulingo || Homepage</title>
     <link rel="stylesheet" href="./src/output.css" />
     <link rel="icon" type="image/x-icon" href="" />
     <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
@@ -14,33 +14,14 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-krem font-figtree">
+  <body class="bg-[#fff8f8] font-figtree">
     <header
-      class="fixed top-15 left-1/2 transform -translate-x-1/2 z-50 flex w-150 py-3 items-center justify-between px-5 gap-2 rounded-full bg-white/85"
+      class="fixed top-15 left-1/2 transform -translate-x-1/2 z-10 flex w-150 py-3 items-center justify-between px-5 gap-2 rounded-full bg-white/85"
     >
       <i
         class="ph ph-chat-circle-dots text-white rounded-2xl w-15 h-12.5 p-2.5 bg-nila text-3xl flex justify-center items-center"
       ></i>
       <img src="./src/assets/logo.svg" alt="logo" />
-      <nav class="hidden items-center gap-1">
-        <a
-          href="#"
-          class="flex flex-col items-center gap-1 rounded-full bg-nila px-4 py-2 text-white"
-        >
-          <span>Home</span>
-          <i class="ph-fill ph-circle text-[10px] text-matahari"></i>
-        </a>
-        <a href="#" class="h-fit px-4 py-2 text-nila/75 font-bold"
-          >Situations</a
-        >
-        <a href="#" class="h-fit px-4 py-2 text-nila/75 font-bold">Practice</a>
-        <a href="#" class="h-fit px-4 py-2 text-nila/75 font-bold">Culture</a>
-        <a href="#" class="h-fit px-4 py-2 text-nila/75 font-bold">About</a>
-      </nav>
-      <div class="hidden">
-        <i class="ph ph-globe"></i>
-        <p class="uppercase">en</p>
-      </div>
       <a href="#" class="btn p-0 h-12.5 flex items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -53,12 +34,194 @@
           stroke-linecap="round"
         >
           <line x1="4" y1="8" x2="20" y2="8" />
-          <line x1="4" y1="16" x2="15" y2="16" />
+          <line x1="4" y1="16" x2="20" y2="16" />
         </svg>
       </a>
     </header>
-    <!-- after scroll header -->
+    <div
+      id="menu"
+      class="fixed inset-0 hidden flex-col justify-between text-white overflow-hidden bg-nila z-50 p-10"
+    >
+      <svg
+        class="absolute -right-100 -bottom-100 w-200 h-200 pointer-events-none opacity-50 -z-1"
+        viewBox="0 0 800 800"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="400" cy="400" r="400" fill="#3B5C9E" />
+      </svg>
+      <div class="flex justify-between">
+        <div class="flex items-center gap-2">
+          <i
+            class="ph-fill ph-chat-circle-dots text-nila rounded-2xl w-12 h-12 p-2.5 bg-matahari text-3xl flex justify-center items-center"
+          ></i>
+
+          <p class="text-2xl font-semibold text-white">GAULINGO</p>
+        </div>
+
+        <a
+          href="#"
+          class="flex gap-2.5 px-6 py-3.75 border-2 items-center text-white text-xl border-white/50 rounded-full"
+        >
+          <i class="ph-bold ph-x"></i>
+        </a>
+      </div>
+      <nav class="mt-10">
+        <ul class="list-none flex flex-col gap-[-100px]">
+          <li class="flex justify-between items-center px-4">
+            <div class="flex gap-10 items-center">
+              <p class="text-matahari">01</p>
+              <h3
+                class="text-[66px] font-black text-white font-unbounded uppercase tracking-[-1.98px]"
+              >
+                Home
+              </h3>
+            </div>
+            <p class="text-white/55 font-medium flex gap-5 items-center">
+              Mulai di sini <i class="ph-bold ph-arrow-up-right text-3xl"></i>
+            </p>
+          </li>
+          <li
+            class="flex justify-between items-center bg-white/25 rounded-2xl px-4"
+          >
+            <div class="flex gap-10 items-center">
+              <p class="text-matahari">02</p>
+
+              <h3
+                class="text-[66px] font-black text-matahari font-unbounded uppercase tracking-[-1.98px]"
+              >
+                SITUATIONS
+              </h3>
+            </div>
+            <p class="text-matahari font-medium flex gap-5 items-center">
+              6 tempat sehari-hari
+
+              <i class="ph-bold ph-arrow-up-right text-3xl"></i>
+            </p>
+          </li>
+          <li class="flex justify-between items-center px-4">
+            <div class="flex gap-10 items-center">
+              <p class="text-matahari">03</p>
+              <h3
+                class="text-[66px] font-black text-white font-unbounded uppercase tracking-[-1.98px]"
+              >
+                CULTURE
+              </h3>
+            </div>
+            <p class="text-white/55 font-medium flex gap-5 items-center">
+              Tips sopan santun
+              <i class="ph-bold ph-arrow-up-right text-3xl"></i>
+            </p>
+          </li>
+          <li class="flex justify-between items-center px-4">
+            <div class="flex gap-10 items-center">
+              <p class="text-matahari">04</p>
+              <h3
+                class="text-[66px] font-black text-white font-unbounded uppercase tracking-[-1.98px]"
+              >
+                PRACTICE
+              </h3>
+            </div>
+            <p class="text-white/55 font-medium flex gap-5 items-center">
+              Kuis & streak <i class="ph-bold ph-arrow-up-right text-3xl"></i>
+            </p>
+          </li>
+          <li class="flex justify-between items-center px-4">
+            <div class="flex gap-10 items-center">
+              <p class="text-matahari">05</p>
+              <h3
+                class="text-[66px] font-black text-white font-unbounded uppercase tracking-[-1.98px]"
+              >
+                SAVED
+              </h3>
+            </div>
+            <p class="text-white/55 font-medium flex gap-5 items-center">
+              Frasa favoritmu
+              <i class="ph-bold ph-arrow-up-right text-3xl"></i>
+            </p>
+          </li>
+          <li class="flex justify-between items-center px-4">
+            <div class="flex gap-10 items-center">
+              <p class="text-matahari">06</p>
+              <h3
+                class="text-[66px] font-black text-white font-unbounded uppercase tracking-[-1.98px]"
+              >
+                ABOUT
+              </h3>
+            </div>
+            <p class="text-white/55 font-medium flex gap-5 items-center">
+              Tim & sumber data
+              <i class="ph-bold ph-arrow-up-right text-3xl"></i>
+            </p>
+          </li>
+        </ul>
+      </nav>
+      <div
+        class="relative z-10 border border-white/50 rounded-3xl px-7 py-5 flex flex-row gap-30 items-center justify-between"
+      >
+        <div class="flex items-center gap-4 w-1/3">
+          <img
+            class="w-12 h-12 rounded-full overflow-hidden shrink-0 flex items-center justify-center text-xl"
+            src="./src/assets/Illustration.png"
+            alt="Gali Ilustration"
+          />
+          <div>
+            <h4 class="font-bold text-2xl">Bingung mau ke mana?</h4>
+            <p class="text-sm text-white/70">
+              Bilang aja ke Gali, nanti dia antar.
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center gap-15 justify-between">
+          <button
+            class="bg-matahari text-nila font-bold px-5 py-2.5 rounded-full flex items-center gap-2"
+          >
+            <i class="ph-fill ph-chat-circle-dots text-xl"></i>
+            <p>Chat</p>
+          </button>
+          <div class="flex flex-col gap-1">
+            <p class="text-xs font-bold text-matahari tracking-wide uppercase">
+              Bahasa
+            </p>
+            <div
+              class="bg-white/20 p-1 rounded-full flex items-center font-bold"
+            >
+              <button class="bg-white text-nila px-3 py-1 rounded-full">
+                EN
+              </button>
+              <button class="text-white/70 px-3 py-1 rounded-full">ID</button>
+            </div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <p class="text-xs font-bold text-matahari tracking-wide uppercase">
+              Ikuti Kami
+            </p>
+            <div class="flex items-center gap-2">
+              <a
+                href="#"
+                class="rounded-full border border-white/30 flex items-center justify-center p-2"
+              >
+                <i class="ph ph-instagram-logo text-2xl"></i>
+              </a>
+              <a
+                href="#"
+                class="rounded-full border border-white/30 flex items-center justify-center p-2"
+              >
+                <i class="ph ph-tiktok-logo text-2xl"></i>
+              </a>
+              <a
+                href="#"
+                class="rounded-full border border-white/30 flex items-center justify-center p-2"
+              >
+                <i class="ph ph-youtube-logo text-2xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- <header
+
       class="sticky top-10 mx-auto z-50 flex w-fit items-center justify-center gap-2 rounded-full bg-white/85 p-2"
     >
       <div id="chatbot" class="h-full">
@@ -90,111 +253,108 @@
         <p>Ask Gali</p>
       </a>
     </header> -->
-    <main class="p-10">
-      <section
-        class="relative w-[calc(100vw-80px)] h-[calc(100vh-60px)] isolate mb-5 overflow-hidden rounded-[clamp(24px,3.5vw,48px)] bg-pasir flex justify-center items-start"
+    <!-- hero -->
+    <section
+      class="sticky top-10 w-[calc(100vw-80px)] h-[calc(100vh-40px)] -z-1 isolate mx-10 mt-10 overflow-hidden rounded-[clamp(24px,3.5vw,48px)] bg-pasir flex justify-center items-start"
+    >
+      <svg
+        viewBox="0 0 1360 930"
+        role="img"
+        class="absolute -bottom-10 left-1/2 h-auto w-[max(100%,900px)] -translate-x-1/2 max-2xl:bottom-0"
       >
-        <!-- background hero -->
-        <svg
-          viewBox="0 0 1360 930"
-          role="img"
-          class="absolute -bottom-15 left-1/2 z-0 h-auto w-[max(100%,900px)] -translate-x-1/2 max-2xl:bottom-0"
-        >
-          <defs>
-            <clipPath id="mouth">
-              <path
-                d="M641 741Q680 752 719 741Q716 772 680 773Q644 772 641 741Z"
-              />
-            </clipPath>
-          </defs>
-          <circle cx="680" cy="740" r="330" class="fill-matahari" />
-          <circle
-            cx="680"
-            cy="730"
-            r="430"
-            fill="none"
-            stroke-width="2"
-            stroke-dasharray="9 15"
-            class="stroke-krem"
-          />
-          <g class="fill-krem/60">
-            <rect x="104" y="340" width="180" height="44" rx="22" />
-            <rect x="164" y="370" width="120" height="44" rx="22" />
-            <rect x="1068" y="300" width="196" height="44" rx="22" />
-            <rect x="1134" y="330" width="130" height="44" rx="22" />
-          </g>
-          <path
-            class="fill-[#e6b084] motion-safe:animate-dune-a"
-            d="M-200 760C-100 720 -50 710 0 750C120 705 220 685 300 692C400 703 450 752 560 772L800 772C900 742 1000 696 1100 708C1200 720 1300 764 1360 752C1420 740 1480 765 1560 750L1560 930L-200 930Z"
-          />
-          <path
-            class="fill-bukit motion-safe:animate-dune-b"
-            d="M-200 860C-120 835 -50 825 0 848C120 815 260 805 380 822C480 836 560 870 680 872C800 872 870 826 960 826C1080 826 1200 842 1360 834C1420 828 1480 842 1560 834L1560 930L-200 930Z"
-          />
-          <path
-            class="fill-[#ff6b4a]"
-            d="M528 930C540 882 580 852 622 846L740 846C790 852 818 884 838 930Z"
-          />
-          <path class="fill-krem" d="M640 846L720 846L702 930L658 930Z" />
-          <path
-            class="fill-terakota"
-            d="M618 862L660 880L664 912Z M742 862L700 880L696 912Z"
-          />
-          <path
-            class="fill-[#ff6b4a]"
-            d="M838 762L882 758C886 832 872 892 836 930L792 930C818 890 836 832 838 762Z"
-          />
-          <path
-            d="M846 822L802 906"
-            fill="none"
-            stroke-width="14"
-            stroke-linecap="round"
-            class="stroke-terakota"
-          />
-          <rect
-            x="650"
-            y="780"
-            width="60"
-            height="80"
-            rx="10"
-            class="fill-bukit"
-          />
-          <path
-            d="M641 788Q680 812 719 788L719 796Q680 822 641 796Z"
-            class="fill-terakota"
-          />
-          <path
-            d="M600 840Q640 884 680 884Q720 884 760 840"
-            fill="none"
-            stroke-width="14"
-            stroke-linecap="round"
-            class="stroke-nila"
-          />
-          <rect
-            x="584"
-            y="812"
-            width="36"
-            height="54"
-            rx="12"
-            class="fill-nila"
-          />
-          <rect
-            x="742"
-            y="812"
-            width="36"
-            height="54"
-            rx="12"
-            class="fill-nila"
-          />
-          <circle cx="601" cy="839" r="7" class="fill-[#ffd23f]" />
-          <circle cx="760" cy="839" r="7" class="fill-[#ffd23f]" />
-
-          <!-- kepala -->
+        <defs>
+          <clipPath id="mouth">
+            <path
+              d="M641 741Q680 752 719 741Q716 772 680 773Q644 772 641 741Z"
+            />
+          </clipPath>
+        </defs>
+        <circle cx="680" cy="740" r="330" class="fill-matahari" />
+        <circle
+          cx="680"
+          cy="730"
+          r="430"
+          fill="none"
+          stroke-width="2"
+          stroke-dasharray="9 15"
+          class="stroke-krem"
+        />
+        <g class="fill-krem/60">
+          <rect x="104" y="340" width="180" height="44" rx="22" />
+          <rect x="164" y="370" width="120" height="44" rx="22" />
+          <rect x="1068" y="300" width="196" height="44" rx="22" />
+          <rect x="1134" y="330" width="130" height="44" rx="22" />
+        </g>
+        <path
+          class="fill-[#e6b084] motion-safe:animate-dune-a"
+          d="M-200 750 C50 670 280 686 510 742 C760 806 940 694 1190 710 C1380 722 1480 758 1560 742 L1560 930 L-200 930Z"
+        />
+        <path
+          class="fill-bukit motion-safe:animate-dune-b"
+          d="M-200 835 C30 775 220 795 400 835 C610 885 830 785 1060 815 C1280 845 1440 805 1560 825 L1560 930 L-200 930Z"
+        />
+        <path
+          class="fill-[#ff6b4a]"
+          d="M528 930C540 882 580 852 622 846L740 846C790 852 818 884 838 930Z"
+        />
+        <path class="fill-krem" d="M640 846L720 846L702 930L658 930Z" />
+        <path
+          class="fill-terakota"
+          d="M618 862L660 880L664 912Z M742 862L700 880L696 912Z"
+        />
+        <rect
+          x="650"
+          y="798"
+          width="60"
+          height="52"
+          rx="10"
+          class="fill-bukit"
+        />
+        <path
+          d="M641 806Q680 828 719 806L719 814Q680 836 641 814Z"
+          class="fill-terakota"
+        />
+        <path
+          d="M600 850Q640 894 680 894Q720 894 760 850"
+          fill="none"
+          stroke-width="14"
+          stroke-linecap="round"
+          class="stroke-nila"
+        />
+        <rect
+          x="584"
+          y="822"
+          width="36"
+          height="54"
+          rx="12"
+          class="fill-nila"
+        />
+        <rect
+          x="742"
+          y="822"
+          width="36"
+          height="54"
+          rx="12"
+          class="fill-nila"
+        />
+        <circle cx="601" cy="849" r="7" class="fill-[#ffd23f]" />
+        <circle cx="760" cy="849" r="7" class="fill-[#ffd23f]" />
+        <path
+          class="fill-[#ff6b4a]"
+          d="M838 772L882 768C886 842 872 902 836 930L792 930C818 890 836 842 838 772Z"
+        />
+        <path
+          d="M846 832L802 916"
+          fill="none"
+          stroke-width="14"
+          stroke-linecap="round"
+          class="stroke-terakota"
+        />
+        <g transform="translate(0, 22)">
           <ellipse cx="577" cy="690" rx="17" ry="24" class="fill-bukit" />
           <ellipse cx="785" cy="690" rx="17" ry="24" class="fill-[#b87d54]" />
           <ellipse cx="681" cy="686" rx="104" ry="112" class="fill-[#b87d54]" />
           <ellipse cx="672" cy="686" rx="98" ry="112" class="fill-bukit" />
-
           <g id="rambut-kribo">
             <g class="fill-[#1b1b2f]">
               <circle cx="680" cy="525" r="32" />
@@ -222,7 +382,6 @@
               <circle cx="602" cy="578" r="8" />
             </g>
           </g>
-
           <g
             fill="none"
             stroke-width="9"
@@ -245,7 +404,6 @@
           />
           <ellipse cx="617" cy="716" rx="17" ry="8" class="fill-[#e0836b]" />
           <ellipse cx="743" cy="716" rx="17" ry="8" class="fill-[#e0836b]" />
-
           <path
             d="M641 741Q680 752 719 741Q716 772 680 773Q644 772 641 741Z"
             class="fill-[#5b1b1b]"
@@ -257,112 +415,115 @@
               class="fill-krem"
             />
           </g>
-          <g class="origin-bottom transform-fill motion-safe:animate-wave">
-            <g class="fill-bukit">
-              <ellipse
-                cx="822"
-                cy="738"
-                rx="14"
-                ry="24"
-                transform="rotate(-50 822 738)"
-              />
-              <rect x="836" y="666" width="14" height="60" rx="7" />
-              <rect x="851" y="657" width="14" height="64" rx="7" />
-              <rect x="866" y="660" width="14" height="62" rx="7" />
-              <rect x="880" y="676" width="14" height="52" rx="7" />
-              <ellipse cx="862" cy="726" rx="33" ry="34" />
-            </g>
-            <path
-              d="M848 742Q860 752 874 742"
-              fill="none"
-              stroke-width="3"
-              stroke-linecap="round"
-              class="stroke-terakota"
+        </g>
+        <g class="origin-bottom transform-fill motion-safe:animate-wave">
+          <g class="fill-bukit">
+            <ellipse
+              cx="822"
+              cy="748"
+              rx="14"
+              ry="24"
+              transform="rotate(-50 822 748)"
             />
+            <rect x="836" y="676" width="14" height="60" rx="7" />
+            <rect x="851" y="667" width="14" height="64" rx="7" />
+            <rect x="866" y="670" width="14" height="62" rx="7" />
+            <rect x="880" y="686" width="14" height="52" rx="7" />
+            <ellipse cx="862" cy="736" rx="33" ry="34" />
           </g>
           <path
-            d="M870 610Q888 620 886 636Q900 646 903 665"
+            d="M848 752Q860 762 874 752"
             fill="none"
-            stroke-width="6"
+            stroke-width="3"
             stroke-linecap="round"
-            stroke-linejoin="round"
-            class="stroke-[#ffd23f]"
+            class="stroke-terakota"
           />
-          <g transform="rotate(-8 974 575)">
-            <rect
-              x="887"
-              y="545"
-              width="175"
-              height="60"
-              rx="30"
-              class="fill-krem"
-            />
-            <text
-              x="974"
-              y="576"
-              text-anchor="middle"
-              dominant-baseline="middle"
-              class="fill-nila text-xl font-bold"
-            >
-              Halo, aku Gali!
-            </text>
-          </g>
-          <g transform="rotate(8 385 723)">
-            <rect
-              x="280"
-              y="690"
-              width="210"
-              height="66"
-              rx="33"
-              class="fill-biru-pucat"
-            />
-            <text
-              x="385"
-              y="723"
-              text-anchor="middle"
-              dominant-baseline="middle"
-              class="fill-nila text-xl font-bold"
-            >
-              Berapa harganya?
-            </text>
-          </g>
-          <g transform="rotate(5 995 730)">
-            <rect
-              x="912"
-              y="702"
-              width="166"
-              height="56"
-              rx="28"
-              class="fill-krem"
-            />
-            <text
-              x="995"
-              y="731"
-              text-anchor="middle"
-              dominant-baseline="middle"
-              class="fill-nila text-xl font-bold"
-            >
-              Matur nuwun
-            </text>
-          </g>
-        </svg>
-        <!-- background clear -->
-        <div class="z-1 mt-30 pb-3.5">
-          <h1
-            class="text-[100px] text-nila font-unbounded font-black text-center px-30 tracking-[-3.12px] leading-25 max-2xl:text-7xl max-2xl:leading-20"
+        </g>
+        <path
+          d="M870 622Q888 632 886 648Q900 658 903 677"
+          fill="none"
+          stroke-width="6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="stroke-[#ffd23f]"
+        />
+        <g transform="rotate(-8 974 575)">
+          <rect
+            x="887"
+            y="545"
+            width="175"
+            height="60"
+            rx="30"
+            class="fill-krem"
+          />
+          <text
+            x="974"
+            y="576"
+            text-anchor="middle"
+            dominant-baseline="middle"
+            class="fill-nila text-xl font-bold"
           >
-            TALK LIKE<br />
-            THE LOCALS DO
-          </h1>
-          <p class="text-nila text-center font-medium text-[22px]">
-            Real phrases. Real places. Real manners.
-          </p>
-          <div class="flex items-center justify-center gap-5 pt-4.75">
-            <a href="#" class="btn">Start exploring</a
-            ><a href="#" class="btn2">Chat with Gali</a>
-          </div>
+            Halo, aku Gali!
+          </text>
+        </g>
+        <g transform="rotate(8 385 723)">
+          <rect
+            x="280"
+            y="690"
+            width="210"
+            height="66"
+            rx="33"
+            class="fill-biru-pucat"
+          />
+          <text
+            x="385"
+            y="723"
+            text-anchor="middle"
+            dominant-baseline="middle"
+            class="fill-nila text-xl font-bold"
+          >
+            Berapa harganya?
+          </text>
+        </g>
+        <g transform="rotate(5 995 730)">
+          <rect
+            x="912"
+            y="702"
+            width="166"
+            height="56"
+            rx="28"
+            class="fill-krem"
+          />
+          <text
+            x="995"
+            y="731"
+            text-anchor="middle"
+            dominant-baseline="middle"
+            class="fill-nila text-xl font-bold"
+          >
+            Matur nuwun
+          </text>
+        </g>
+      </svg>
+      <!-- background clear -->
+      <div class="z-1 mt-30 pb-3.5">
+        <h1
+          class="text-[100px] text-nila font-unbounded font-black text-center px-30 tracking-[-3.12px] leading-25 max-2xl:text-7xl max-2xl:leading-20"
+        >
+          TALK LIKE<br />
+          THE LOCALS DO
+        </h1>
+        <p class="text-nila text-center font-medium text-[22px]">
+          Real phrases. Real places. Real manners.
+        </p>
+        <div class="flex items-center justify-center gap-5 pt-4.75">
+          <a href="#" class="btn">Start exploring</a
+          ><a href="#" class="btn2">Chat with Gali</a>
         </div>
-      </section>
+      </div>
+    </section>
+    <main class="p-10 relative -mt-10 z-3 bg-krem rounded-t-[50px]">
+      <!-- situation  -->
       <section class="mt-25">
         <hgroup class="flex justify-between items-end">
           <div class="flex flex-col">
@@ -388,9 +549,9 @@
           ></a>
         </hgroup>
         <div
-          class="my-10 grid w-full max-w-340 gap-6 grid-cols-[2fr_1fr_1fr] grid-rows-[1fr_1fr]"
+          class="my-10 grid w-full gap-6 grid-cols-[2fr_1fr_1fr] grid-rows-[1fr_1fr]"
         >
-          <!-- most popular card -->
+          <!-- most popular card (warung card) -->
           <div
             class="h-fit relative overflow-hidden rounded-4xl bg-terakota p-10 text-white row-span-2"
           >
@@ -422,9 +583,9 @@
               </div>
 
               <h2
-                class="font-unbounded font-black mt-6 text-[52px] tracking-[-1.68px]"
+                class="uppercase font-unbounded font-black mt-6 text-[52px] tracking-[-1.68px]"
               >
-                WARUNG
+                LOCAL SHOP
               </h2>
 
               <p class="mt-3 max-w-120 text-[17px] leading-6.5">
@@ -495,6 +656,83 @@
                 Open Warung
                 <i class="ph-bold ph-arrow-right"></i>
               </a>
+            </div>
+          </div>
+          <!-- other cards -->
+          <div
+            class="flex flex-col justify-between p-7 bg-biru-muda rounded-4xl"
+          >
+            <div class="flex justify-between items-center">
+              <i
+                class="ph-bold ph-graduation-cap p-4 text-3xl rounded-2xl bg-white/60 text-nila"
+              ></i>
+              <i class="ph-bold ph-arrow-up-right text-3xl text-nila"></i>
+            </div>
+            <div>
+              <h3
+                class="uppercase font-unbounded text-3xl text-nila font-black tracking-tighter"
+              >
+                SCHOOL
+              </h3>
+              <p class="text-nila/85 text-sm font-semibold">
+                In class & with teachers · 8 phrases
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col justify-between p-7 bg-pasir rounded-4xl">
+            <div class="flex justify-between items-center">
+              <i
+                class="ph-bold ph-train p-4 text-3xl rounded-2xl bg-white/60 text-nila"
+              ></i>
+              <i class="ph-bold ph-arrow-up-right text-3xl text-nila"></i>
+            </div>
+            <div>
+              <h3
+                class="uppercase font-unbounded text-3xl text-nila font-black tracking-tighter"
+              >
+                PUBLIC TRANSIT
+              </h3>
+              <p class="text-nila/85 text-sm font-semibold">
+                Getting around town · 8 phrases
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col justify-between p-7 bg-matahari rounded-4xl"
+          >
+            <div class="flex justify-between items-center">
+              <i
+                class="ph-bold ph-hand-palm p-4 text-3xl rounded-2xl bg-white/60 text-nila"
+              ></i>
+              <i class="ph-bold ph-arrow-up-right text-3xl text-nila"></i>
+            </div>
+            <div>
+              <h3
+                class="uppercase font-unbounded text-3xl text-nila font-black tracking-tighter"
+              >
+                introduction
+              </h3>
+              <p class="text-nila/85 text-sm font-semibold">
+                Meeting new people · 8 phrases
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col justify-between p-7 bg-nila rounded-4xl">
+            <div class="flex justify-between items-center">
+              <i
+                class="ph-bold ph-warning p-4 text-3xl rounded-2xl bg-white/25 text-white"
+              ></i>
+              <i class="ph-bold ph-arrow-up-right text-3xl text-white"></i>
+            </div>
+            <div>
+              <h3
+                class="uppercase font-unbounded text-3xl text-white font-black tracking-tighter"
+              >
+                EMERGENCY
+              </h3>
+              <p class="text-white/85 text-sm font-semibold">
+                When you need help · 8 phrases
+              </p>
             </div>
           </div>
         </div>

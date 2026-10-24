@@ -38,6 +38,7 @@
         </svg>
       </a>
     </header>
+    <!-- hero -->
     <div
       id="menu"
       class="fixed inset-0 hidden flex-col justify-between text-white overflow-hidden bg-nila z-50 p-10"
@@ -701,7 +702,7 @@
           </div>
         </div>
       </section>
-      <!--  -->
+      <!-- how it works section -->
       <section class="mt-25">
         <hgroup class="flex flex-col">
           <p
@@ -767,7 +768,7 @@
             </a>
           </div>
           <!-- 01 -->
-          <div class="p-10 flex flex-col gap-6 bg-white w-full rounded-4xl">
+          <div class="p-10 hidden flex-col gap-6 bg-white w-full rounded-4xl">
             <p class="text-xs text-nila">STEP 1 · PICK YOUR PLACE</p>
             <h3 class="text-3xl font-bold text-nila">Where are you today?</h3>
             <div class="grid grid-cols-3 gap-3">
@@ -798,9 +799,200 @@
             </div>
           </div>
           <!-- 02 -->
-          <div class="p-10 flex flex-col gap-6 bg-white w-full rounded-4xl">
-            <p class="text-xs text-terakota">STEP 2 · PICK YOUR PLACE</p>
+          <div class="p-10 hidden flex-col gap-6 bg-white w-full rounded-4xl">
+            <p class="text-xs text-terakota uppercase">
+              STEP 2 · LISTEN &amp; REPEAT
+            </p>
             <h3 class="text-3xl font-bold text-nila">Berapa harganya?</h3>
+            <p class="font-semibold text-nila mb-2">"How much is this?"</p>
+            <div
+              class="w-full rounded-full border border-terakota/50 p-1.5 flex items-center bg-white"
+            >
+              <button
+                class="shrink-0 w-11 h-11 rounded-full bg-terakota text-white flex items-center justify-center hover:opacity-90 transition-opacity cursor-pointer border-0 shadow-sm"
+                aria-label="Play"
+              >
+                <svg class="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24">
+                  <polygon points="6 4 20 12 6 20 6 4"></polygon>
+                </svg>
+              </button>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <button
+                class="rounded-full w-10 h-10 bg-terakota text-white font-bold flex items-center justify-center"
+              >
+                1x
+              </button>
+              <button
+                class="rounded-full border border-nila text-nila py-1.75 px-4 flex items-center justify-center"
+              >
+                0.5x slow
+              </button>
+            </div>
+          </div>
+          <!-- 03 -->
+          <div class="p-10 flex flex-col gap-6 bg-white w-full rounded-4xl">
+            <p class="text-xs text-terakota uppercase">
+              STEP 3 · QUIZ WITH GALI
+            </p>
+            <h3 class="text-3xl font-bold text-nila">Berapa harganya?</h3>
+            <div class="flex flex-col gap-3 my-2">
+              <label
+                class="relative flex items-center p-4 rounded-2xl border-2 border-nila transition-all has-checked:border-terakota has-checked:bg-terakota/5"
+              >
+                <input
+                  type="radio"
+                  name="quiz_answer"
+                  value="a"
+                  class="peer hidden"
+                />
+                <span class="font-bold text-nila peer-checked:text-terakota"
+                  >How much is this?</span
+                >
+              </label>
+              <label
+                class="relative flex items-center p-4 rounded-2xl border-2 border-nila transition-all has-checked:border-terakota has-checked:bg-terakota/5"
+              >
+                <input
+                  type="radio"
+                  name="quiz_answer"
+                  value="b"
+                  class="peer hidden"
+                />
+                <span class="font-bold text-nila peer-checked:text-terakota"
+                  >Where is the place?</span
+                >
+              </label>
+              <label
+                class="relative flex items-center p-4 rounded-2xl border-2 border-nila has-checked:border-terakota has-checked:bg-terakota/5"
+              >
+                <input
+                  type="radio"
+                  name="quiz_answer"
+                  value="c"
+                  class="peer hidden"
+                />
+                <span class="font-bold text-nila peer-checked:text-terakota"
+                  >What time does it open?</span
+                >
+              </label>
+            </div>
+
+            <!-- jawaban salah -->
+            <div class="hidden items-center gap-2 pt-2 flex-wrap">
+              <span
+                class="px-4 py-2 rounded-full bg-matahari text-nila font-semibold"
+              >
+                Oops!
+              </span>
+              <span class="px-4 py-2 rounded-full bg-pasir text-nila">
+                +0 points
+              </span>
+              <span class="px-4 py-2 rounded-full bg-biru-muda text-nila">
+                Streak lost
+              </span>
+            </div>
+            <!-- jawaban benar -->
+            <div class="flex items-center gap-2 pt-2 flex-wrap">
+              <span
+                class="px-4 py-2 rounded-full bg-matahari text-nila font-semibold"
+              >
+                Nice one!
+              </span>
+              <span class="px-4 py-2 rounded-full bg-pasir text-nila">
+                +10 points
+              </span>
+              <span class="px-4 py-2 rounded-full bg-biru-muda text-nila">
+                Streak kept
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PHRASE OF THE DAY -->
+      <section class="mt-25 p-10 bg-nila rounded-4xl">
+        <hgroup class="flex justify-between items-center mb-8">
+          <p class="text-matahari uppercase font-bold tracking-wider">
+            PHRASE OF THE DAY
+          </p>
+          <div
+            class="inline-flex items-center p-1 rounded-full border-2 border-white"
+          >
+            <label
+              class="px-6 py-3 bg-matahari text-nila rounded-full text-sm font-semibold"
+            >
+              <input
+                type="radio"
+                name="language_select"
+                value="id"
+                class="hidden"
+                checked
+              />
+              Indonesia
+            </label>
+            <label
+              class="px-6 py-3 rounded-full text-sm font-semibold text-white"
+            >
+              <input
+                type="radio"
+                name="language_select"
+                value="su"
+                class="hidden"
+              />
+              Sunda
+            </label>
+            <label
+              class="px-6 py-3 rounded-full text-sm font-semibold text-white"
+            >
+              <input
+                type="radio"
+                name="language_select"
+                value="jv"
+                class="hidden"
+              />
+              Jawa
+            </label>
+          </div>
+        </hgroup>
+        <div class="flex justify-between gap-15">
+          <div class="flex flex-col gap-5 w-3/4">
+            <h3 class="font-unbounded font-black text-6xl text-krem">
+              Terima kasih banyak!
+            </h3>
+            <div class="flex gap-4 items-center text-white">
+              <p class="px-4 py-2 border border-white rounded-full">
+                teh-REE-mah KAH-see BAH-nyak
+              </p>
+              <p>"Thank you very much!"</p>
+            </div>
+            <div class="flex gap-4 text-white">
+              <button
+                class="flex gap-2 items-center text-nila bg-matahari py-4 px-5 rounded-full font-bold"
+              >
+                <i class="ph-bold ph-speaker-high text-xl"></i>
+                <p>Listen</p>
+              </button>
+              <button class="px-4 py-2 border border-white rounded-full">
+                Slow
+              </button>
+              <button
+                class="px-4 py-2 border border-white flex items-center gap-2 rounded-full"
+              >
+                <i class="text-xl ph-bold ph-bookmark-simple"></i> Save
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-col h-fit pl-5 gap-3 border-l-2 border-pasir">
+            <p class="flex items-center gap-4 font-bold text-pasir">
+              <i class="ph-bold ph-lightbulb"></i> CULTURE TIP
+            </p>
+            <p class="font-bold text-krem text-2xl">
+              Give and take things with your right hand. In Indonesia it is a
+              sign of respect.
+            </p>
+            <a href="#" class="flex items-center gap-4 text-pasir font-bold"
+              >More culture tips<i class="ph-bold ph-arrow-right"></i
+            ></a>
           </div>
         </div>
       </section>

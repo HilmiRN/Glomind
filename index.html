@@ -16,13 +16,14 @@
   </head>
   <body class="bg-[#fff8f8] font-figtree">
     <header
-      class="fixed top-15 left-1/2 transform -translate-x-1/2 z-10 flex w-150 py-3 items-center justify-between px-5 gap-2 rounded-4xl bg-white"
+      id="nav"
+      class="z-50 fixed top-10 left-1/2 -translate-x-1/2 flex w-150 py-3 items-center justify-between px-5 gap-2 rounded-4xl bg-white/10 border-white/50 backdrop-blur-md shadow-[0_10px_30px_rgba(47,76,138,0.12)] transition-all duration-500 motion-reduce:transition-none opacity-0 -translate-y-10 pointer-events-none data-shown:opacity-100 data-shown:translate-y-0 data-shown:pointer-events-auto"
     >
       <i
         class="ph ph-chat-circle-dots text-white rounded-2xl w-15 h-12.5 p-2.5 bg-nila text-3xl flex justify-center items-center"
       ></i>
       <img src="./src/assets/logo.svg" alt="logo" />
-      <a href="#" class="btn p-0 h-12.5 flex items-center">
+      <button onclick="openMenu()" class="btn p-0 h-12.5 flex items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="28"
@@ -36,12 +37,11 @@
           <line x1="4" y1="8" x2="20" y2="8" />
           <line x1="4" y1="16" x2="20" y2="16" />
         </svg>
-      </a>
+      </button>
     </header>
-    <!-- hero -->
     <div
       id="menu"
-      class="fixed inset-0 hidden flex-col justify-between text-white overflow-hidden bg-nila z-50 p-10"
+      class="fixed inset-0 hidden flex-col justify-between text-white overflow-hidden bg-nila z-60 p-10"
     >
       <svg
         class="absolute -right-100 -bottom-100 w-200 h-200 pointer-events-none opacity-50 -z-1"
@@ -59,9 +59,9 @@
 
           <p class="text-2xl font-semibold text-white">GAULINGO</p>
         </div>
-
         <a
-          href="#"
+          href="javascript:void(0)"
+          onclick="closeMenu()"
           class="flex gap-2.5 px-6 py-3.75 border-2 items-center text-white text-xl border-white/50 rounded-full"
         >
           <i class="ph-bold ph-x"></i>
@@ -69,7 +69,10 @@
       </div>
       <nav class="mt-10">
         <ul class="list-none flex flex-col gap-[-100px]">
-          <li class="flex justify-between items-center px-4">
+          <li
+            class="flex justify-between items-center px-4"
+            onclick="closeMenu()"
+          >
             <a href="#" class="flex gap-10 items-center">
               <p class="text-matahari">01</p>
               <h3
@@ -100,7 +103,10 @@
               <i class="ph-bold ph-arrow-up-right text-3xl"></i>
             </p>
           </li>
-          <li class="flex justify-between items-center px-4">
+          <li
+            class="flex justify-between items-center px-4"
+            onclick="closeMenu()"
+          >
             <a href="#" class="flex gap-10 items-center">
               <p class="text-matahari">03</p>
               <h3
@@ -114,7 +120,10 @@
               <i class="ph-bold ph-arrow-up-right text-3xl"></i>
             </p>
           </li>
-          <li class="flex justify-between items-center px-4">
+          <li
+            class="flex justify-between items-center px-4"
+            onclick="closeMenu()"
+          >
             <a href="#" class="flex gap-10 items-center">
               <p class="text-matahari">04</p>
               <h3
@@ -127,7 +136,10 @@
               Kuis & streak <i class="ph-bold ph-arrow-up-right text-3xl"></i>
             </p>
           </li>
-          <li class="flex justify-between items-center px-4">
+          <li
+            class="flex justify-between items-center px-4"
+            onclick="closeMenu()"
+          >
             <a href="#" class="flex gap-10 items-center">
               <p class="text-matahari">05</p>
               <h3
@@ -141,7 +153,10 @@
               <i class="ph-bold ph-arrow-up-right text-3xl"></i>
             </p>
           </li>
-          <li class="flex justify-between items-center px-4">
+          <li
+            class="flex justify-between items-center px-4"
+            onclick="closeMenu()"
+          >
             <a href="#" class="flex gap-10 items-center">
               <p class="text-matahari">06</p>
               <h3
@@ -221,277 +236,313 @@
         </div>
       </div>
     </div>
+    <!-- hero -->
     <section
-      class="sticky top-10 w-[calc(100vw-80px)] h-[calc(100vh-40px)] -z-1 isolate mx-10 mt-10 overflow-hidden rounded-[clamp(24px,3.5vw,48px)] bg-pasir flex justify-center items-start"
+      class="sticky top-10 w-[calc(100vw-80px)] h-[calc(100vh-40px)] -z-1 isolate mx-10 mt-10 overflow-hidden rounded-[clamp(24px,3.5vw,48px)] bg-pasir @container-size"
     >
-      <svg
-        viewBox="0 0 1360 930"
-        role="img"
-        class="absolute -bottom-10 left-1/2 h-auto w-[max(100%,900px)] -translate-x-1/2 max-2xl:bottom-10"
+      <div
+        class="absolute inset-0 [--u:min(calc(100cqw/1360),calc(100cqh/930))]"
       >
-        <defs>
-          <clipPath id="mouth">
+        <svg
+          viewBox="0 0 1360 930"
+          role="img"
+          class="absolute -bottom-10 left-1/2 h-auto w-[max(100%,900px)] -translate-x-1/2 max-2xl:bottom-10"
+        >
+          <defs>
+            <clipPath id="mouth">
+              <path
+                d="M641 741Q680 752 719 741Q716 772 680 773Q644 772 641 741Z"
+              />
+            </clipPath>
+          </defs>
+          <circle cx="680" cy="740" r="330" class="fill-matahari" />
+          <circle
+            cx="680"
+            cy="730"
+            r="430"
+            fill="none"
+            stroke-width="2"
+            stroke-dasharray="9 15"
+            class="stroke-krem"
+          />
+          <g class="fill-krem/60">
+            <rect x="104" y="340" width="180" height="44" rx="22" />
+            <rect x="164" y="370" width="120" height="44" rx="22" />
+            <rect x="1068" y="300" width="196" height="44" rx="22" />
+            <rect x="1134" y="330" width="130" height="44" rx="22" />
+          </g>
+          <path
+            class="fill-[#e6b084] motion-safe:animate-dune-a"
+            d="M-200 750 C50 670 280 686 510 742 C760 806 940 694 1190 710 C1380 722 1480 758 1560 742 L1560 930 L-200 930Z"
+          />
+          <path
+            class="fill-bukit motion-safe:animate-dune-b"
+            d="M-200 835 C30 775 220 795 400 835 C610 885 830 785 1060 815 C1280 845 1440 805 1560 825 L1560 930 L-200 930Z"
+          />
+          <path
+            class="fill-[#ff6b4a]"
+            d="M528 930C540 882 580 852 622 846L740 846C790 852 818 884 838 930Z"
+          />
+          <path class="fill-krem" d="M640 846L720 846L702 930L658 930Z" />
+          <path
+            class="fill-terakota"
+            d="M618 862L660 880L664 912Z M742 862L700 880L696 912Z"
+          />
+          <rect
+            x="650"
+            y="798"
+            width="60"
+            height="52"
+            rx="10"
+            class="fill-bukit"
+          />
+          <path
+            d="M641 806Q680 828 719 806L719 814Q680 836 641 814Z"
+            class="fill-terakota"
+          />
+          <path
+            d="M600 850Q640 894 680 894Q720 894 760 850"
+            fill="none"
+            stroke-width="14"
+            stroke-linecap="round"
+            class="stroke-nila"
+          />
+          <rect
+            x="584"
+            y="822"
+            width="36"
+            height="54"
+            rx="12"
+            class="fill-nila"
+          />
+          <rect
+            x="742"
+            y="822"
+            width="36"
+            height="54"
+            rx="12"
+            class="fill-nila"
+          />
+          <circle cx="601" cy="849" r="7" class="fill-[#ffd23f]" />
+          <circle cx="760" cy="849" r="7" class="fill-[#ffd23f]" />
+          <path
+            class="fill-[#ff6b4a]"
+            d="M838 772L882 768C886 842 872 902 836 930L792 930C818 890 836 842 838 772Z"
+          />
+          <path
+            d="M846 832L802 916"
+            fill="none"
+            stroke-width="14"
+            stroke-linecap="round"
+            class="stroke-terakota"
+          />
+          <g transform="translate(0, 22)">
+            <ellipse cx="577" cy="690" rx="17" ry="24" class="fill-bukit" />
+            <ellipse cx="785" cy="690" rx="17" ry="24" class="fill-[#b87d54]" />
+            <ellipse
+              cx="681"
+              cy="686"
+              rx="104"
+              ry="112"
+              class="fill-[#b87d54]"
+            />
+            <ellipse cx="672" cy="686" rx="98" ry="112" class="fill-bukit" />
+            <g id="rambut-kribo">
+              <g class="fill-[#1b1b2f]">
+                <circle cx="680" cy="525" r="32" />
+                <circle cx="645" cy="535" r="30" />
+                <circle cx="715" cy="535" r="30" />
+                <circle cx="615" cy="552" r="28" />
+                <circle cx="745" cy="552" r="28" />
+                <circle cx="588" cy="580" r="28" />
+                <circle cx="572" cy="612" r="26" />
+                <circle cx="575" cy="640" r="22" />
+                <circle cx="772" cy="580" r="28" />
+                <circle cx="788" cy="612" r="26" />
+                <circle cx="785" cy="640" r="22" />
+                <circle cx="680" cy="565" r="45" />
+                <circle cx="625" cy="590" r="38" />
+                <circle cx="735" cy="590" r="38" />
+                <circle cx="680" cy="596" r="30" />
+                <path d="M 572 640 Q 570 662 578 668 Q 582 652 584 638 Z" />
+                <path d="M 788 640 Q 790 662 782 668 Q 778 652 776 638 Z" />
+              </g>
+              <g class="fill-[#3a3a5c]">
+                <circle cx="635" cy="545" r="10" />
+                <circle cx="695" cy="535" r="10" />
+                <circle cx="735" cy="555" r="9" />
+                <circle cx="602" cy="578" r="8" />
+              </g>
+            </g>
+            <g
+              fill="none"
+              stroke-width="9"
+              stroke-linecap="round"
+              class="stroke-[#1b1b30]"
+            >
+              <path d="M626 650L662 646" />
+              <path d="M700 645L736 651" />
+            </g>
+            <ellipse cx="642" cy="682" rx="11" ry="15" class="fill-[#1b1b30]" />
+            <ellipse cx="717" cy="682" rx="11" ry="15" class="fill-[#1b1b30]" />
+            <circle cx="646" cy="676" r="3.5" class="fill-krem" />
+            <circle cx="721" cy="676" r="3.5" class="fill-krem" />
+            <path
+              d="M679 690C672 705 676 718 686 722"
+              fill="none"
+              stroke-width="4"
+              stroke-linecap="round"
+              class="stroke-terakota"
+            />
+            <ellipse cx="617" cy="716" rx="17" ry="8" class="fill-[#e0836b]" />
+            <ellipse cx="743" cy="716" rx="17" ry="8" class="fill-[#e0836b]" />
             <path
               d="M641 741Q680 752 719 741Q716 772 680 773Q644 772 641 741Z"
+              class="fill-[#5b1b1b]"
             />
-          </clipPath>
-        </defs>
-        <circle cx="680" cy="740" r="330" class="fill-matahari" />
-        <circle
-          cx="680"
-          cy="730"
-          r="430"
-          fill="none"
-          stroke-width="2"
-          stroke-dasharray="9 15"
-          class="stroke-krem"
-        />
-        <g class="fill-krem/60">
-          <rect x="104" y="340" width="180" height="44" rx="22" />
-          <rect x="164" y="370" width="120" height="44" rx="22" />
-          <rect x="1068" y="300" width="196" height="44" rx="22" />
-          <rect x="1134" y="330" width="130" height="44" rx="22" />
-        </g>
-        <path
-          class="fill-[#e6b084] motion-safe:animate-dune-a"
-          d="M-200 750 C50 670 280 686 510 742 C760 806 940 694 1190 710 C1380 722 1480 758 1560 742 L1560 930 L-200 930Z"
-        />
-        <path
-          class="fill-bukit motion-safe:animate-dune-b"
-          d="M-200 835 C30 775 220 795 400 835 C610 885 830 785 1060 815 C1280 845 1440 805 1560 825 L1560 930 L-200 930Z"
-        />
-        <path
-          class="fill-[#ff6b4a]"
-          d="M528 930C540 882 580 852 622 846L740 846C790 852 818 884 838 930Z"
-        />
-        <path class="fill-krem" d="M640 846L720 846L702 930L658 930Z" />
-        <path
-          class="fill-terakota"
-          d="M618 862L660 880L664 912Z M742 862L700 880L696 912Z"
-        />
-        <rect
-          x="650"
-          y="798"
-          width="60"
-          height="52"
-          rx="10"
-          class="fill-bukit"
-        />
-        <path
-          d="M641 806Q680 828 719 806L719 814Q680 836 641 814Z"
-          class="fill-terakota"
-        />
-        <path
-          d="M600 850Q640 894 680 894Q720 894 760 850"
-          fill="none"
-          stroke-width="14"
-          stroke-linecap="round"
-          class="stroke-nila"
-        />
-        <rect
-          x="584"
-          y="822"
-          width="36"
-          height="54"
-          rx="12"
-          class="fill-nila"
-        />
-        <rect
-          x="742"
-          y="822"
-          width="36"
-          height="54"
-          rx="12"
-          class="fill-nila"
-        />
-        <circle cx="601" cy="849" r="7" class="fill-[#ffd23f]" />
-        <circle cx="760" cy="849" r="7" class="fill-[#ffd23f]" />
-        <path
-          class="fill-[#ff6b4a]"
-          d="M838 772L882 768C886 842 872 902 836 930L792 930C818 890 836 842 838 772Z"
-        />
-        <path
-          d="M846 832L802 916"
-          fill="none"
-          stroke-width="14"
-          stroke-linecap="round"
-          class="stroke-terakota"
-        />
-        <g transform="translate(0, 22)">
-          <ellipse cx="577" cy="690" rx="17" ry="24" class="fill-bukit" />
-          <ellipse cx="785" cy="690" rx="17" ry="24" class="fill-[#b87d54]" />
-          <ellipse cx="681" cy="686" rx="104" ry="112" class="fill-[#b87d54]" />
-          <ellipse cx="672" cy="686" rx="98" ry="112" class="fill-bukit" />
-          <g id="rambut-kribo">
-            <g class="fill-[#1b1b2f]">
-              <circle cx="680" cy="525" r="32" />
-              <circle cx="645" cy="535" r="30" />
-              <circle cx="715" cy="535" r="30" />
-              <circle cx="615" cy="552" r="28" />
-              <circle cx="745" cy="552" r="28" />
-              <circle cx="588" cy="580" r="28" />
-              <circle cx="572" cy="612" r="26" />
-              <circle cx="575" cy="640" r="22" />
-              <circle cx="772" cy="580" r="28" />
-              <circle cx="788" cy="612" r="26" />
-              <circle cx="785" cy="640" r="22" />
-              <circle cx="680" cy="565" r="45" />
-              <circle cx="625" cy="590" r="38" />
-              <circle cx="735" cy="590" r="38" />
-              <circle cx="680" cy="596" r="30" />
-              <path d="M 572 640 Q 570 662 578 668 Q 582 652 584 638 Z" />
-              <path d="M 788 640 Q 790 662 782 668 Q 778 652 776 638 Z" />
-            </g>
-            <g class="fill-[#3a3a5c]">
-              <circle cx="635" cy="545" r="10" />
-              <circle cx="695" cy="535" r="10" />
-              <circle cx="735" cy="555" r="9" />
-              <circle cx="602" cy="578" r="8" />
+            <g clip-path="url(#mouth)">
+              <ellipse
+                cx="680"
+                cy="770"
+                rx="15"
+                ry="9"
+                class="fill-[#ff6b4a]"
+              />
+              <path
+                d="M641 741Q680 752 719 741L717 750Q680 760 643 750Z"
+                class="fill-krem"
+              />
             </g>
           </g>
-          <g
-            fill="none"
-            stroke-width="9"
-            stroke-linecap="round"
-            class="stroke-[#1b1b30]"
-          >
-            <path d="M626 650L662 646" />
-            <path d="M700 645L736 651" />
-          </g>
-          <ellipse cx="642" cy="682" rx="11" ry="15" class="fill-[#1b1b30]" />
-          <ellipse cx="717" cy="682" rx="11" ry="15" class="fill-[#1b1b30]" />
-          <circle cx="646" cy="676" r="3.5" class="fill-krem" />
-          <circle cx="721" cy="676" r="3.5" class="fill-krem" />
-          <path
-            d="M679 690C672 705 676 718 686 722"
-            fill="none"
-            stroke-width="4"
-            stroke-linecap="round"
-            class="stroke-terakota"
-          />
-          <ellipse cx="617" cy="716" rx="17" ry="8" class="fill-[#e0836b]" />
-          <ellipse cx="743" cy="716" rx="17" ry="8" class="fill-[#e0836b]" />
-          <path
-            d="M641 741Q680 752 719 741Q716 772 680 773Q644 772 641 741Z"
-            class="fill-[#5b1b1b]"
-          />
-          <g clip-path="url(#mouth)">
-            <ellipse cx="680" cy="770" rx="15" ry="9" class="fill-[#ff6b4a]" />
+          <g class="origin-bottom transform-fill motion-safe:animate-wave">
+            <g class="fill-bukit">
+              <ellipse
+                cx="822"
+                cy="748"
+                rx="14"
+                ry="24"
+                transform="rotate(-50 822 748)"
+              />
+              <rect x="836" y="676" width="14" height="60" rx="7" />
+              <rect x="851" y="667" width="14" height="64" rx="7" />
+              <rect x="866" y="670" width="14" height="62" rx="7" />
+              <rect x="880" y="686" width="14" height="52" rx="7" />
+              <ellipse cx="862" cy="736" rx="33" ry="34" />
+            </g>
             <path
-              d="M641 741Q680 752 719 741L717 750Q680 760 643 750Z"
-              class="fill-krem"
+              d="M848 752Q860 762 874 752"
+              fill="none"
+              stroke-width="3"
+              stroke-linecap="round"
+              class="stroke-terakota"
             />
-          </g>
-        </g>
-        <g class="origin-bottom transform-fill motion-safe:animate-wave">
-          <g class="fill-bukit">
-            <ellipse
-              cx="822"
-              cy="748"
-              rx="14"
-              ry="24"
-              transform="rotate(-50 822 748)"
-            />
-            <rect x="836" y="676" width="14" height="60" rx="7" />
-            <rect x="851" y="667" width="14" height="64" rx="7" />
-            <rect x="866" y="670" width="14" height="62" rx="7" />
-            <rect x="880" y="686" width="14" height="52" rx="7" />
-            <ellipse cx="862" cy="736" rx="33" ry="34" />
           </g>
           <path
-            d="M848 752Q860 762 874 752"
+            d="M870 622Q888 632 886 648Q900 658 903 677"
             fill="none"
-            stroke-width="3"
+            stroke-width="6"
             stroke-linecap="round"
-            class="stroke-terakota"
+            stroke-linejoin="round"
+            class="stroke-[#ffd23f]"
           />
-        </g>
-        <path
-          d="M870 622Q888 632 886 648Q900 658 903 677"
-          fill="none"
-          stroke-width="6"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="stroke-[#ffd23f]"
-        />
-        <g transform="rotate(-8 974 575)">
-          <rect
-            x="887"
-            y="545"
-            width="175"
-            height="60"
-            rx="30"
-            class="fill-krem"
-          />
-          <text
-            x="974"
-            y="576"
-            text-anchor="middle"
-            dominant-baseline="middle"
-            class="fill-nila text-xl font-bold"
-          >
-            Halo, aku Gali!
-          </text>
-        </g>
-        <g transform="rotate(8 385 723)">
-          <rect
-            x="280"
-            y="690"
-            width="210"
-            height="66"
-            rx="33"
-            class="fill-biru-pucat"
-          />
-          <text
-            x="385"
-            y="723"
-            text-anchor="middle"
-            dominant-baseline="middle"
-            class="fill-nila text-xl font-bold"
-          >
-            Berapa harganya?
-          </text>
-        </g>
-        <g transform="rotate(5 995 730)">
-          <rect
-            x="912"
-            y="702"
-            width="166"
-            height="56"
-            rx="28"
-            class="fill-krem"
-          />
-          <text
-            x="995"
-            y="731"
-            text-anchor="middle"
-            dominant-baseline="middle"
-            class="fill-nila text-xl font-bold"
-          >
-            Matur nuwun
-          </text>
-        </g>
-      </svg>
-      <!-- background clear -->
-      <div class="z-1 mt-30 pb-3.5">
-        <h1
-          class="text-[102px] max-2xl:text-7xl text-nila font-unbounded font-black text-center px-30 tracking-[-3.12px] leading-25"
+          <g class="text-xl font-bold">
+            <g transform="rotate(-6 974 558)">
+              <rect
+                x="886"
+                y="534"
+                width="176"
+                height="48"
+                rx="24"
+                class="fill-white"
+              />
+              <text
+                x="974"
+                y="559"
+                text-anchor="middle"
+                dominant-baseline="middle"
+                class="fill-nila"
+              >
+                Halo, aku Gali!
+              </text>
+            </g>
+            <g transform="rotate(6 385 708)">
+              <rect
+                x="281"
+                y="684"
+                width="209"
+                height="48"
+                rx="24"
+                class="fill-biru-pucat"
+              />
+              <text
+                x="385"
+                y="709"
+                text-anchor="middle"
+                dominant-baseline="middle"
+                class="fill-nila"
+              >
+                Berapa harganya?
+              </text>
+            </g>
+            <g transform="rotate(4 995 713)">
+              <rect
+                x="912"
+                y="689"
+                width="166"
+                height="48"
+                rx="24"
+                class="fill-white"
+              />
+              <text
+                x="995"
+                y="714"
+                text-anchor="middle"
+                dominant-baseline="middle"
+                class="fill-nila"
+              >
+                Matur nuwun
+              </text>
+            </g>
+          </g>
+        </svg>
+        <div
+          class="absolute inset-x-0 top-[calc(100%-876*var(--u))] flex flex-col items-center text-center text-nila"
         >
-          TALK LIKE<br />
-          THE LOCALS DO
-        </h1>
-        <p class="text-nila text-center font-medium text-[22px]">
-          Real phrases. Real places. Real manners.
-        </p>
-        <div class="flex items-center justify-center gap-5 pt-4.75">
-          <a href="#" class="btn">Start exploring</a
-          ><a href="#" class="btn2">Chat with Gali</a>
+          <h1
+            class="font-unbounded font-black text-[calc(104*var(--u))] leading-[0.96] tracking-[-0.03em]"
+          >
+            TALK LIKE<br />
+            THE LOCALS DO
+          </h1>
+          <p
+            class="mt-[calc(32*var(--u))] font-medium text-[max(16px,calc(22*var(--u)))]"
+          >
+            Real phrases. Real places. Real manners.
+          </p>
+          <div
+            class="mt-[max(16px,calc(24*var(--u)))] flex flex-wrap justify-center gap-3"
+          >
+            <a
+              href="#"
+              class="flex items-center gap-2.5 rounded-full border-b-6 border-white bg-nila py-4 pl-7 pr-6 text-[17px] font-bold text-white transition-all duration-300 hover:bg-[#24407a]"
+            >
+              Start exploring
+              <i class="ph-bold ph-arrow-right text-2xl"></i>
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2.5 rounded-full bg-white py-4 pl-5.5 pr-7 text-[17px] font-bold text-nila transition-all duration-300 hover:bg-krem-tua"
+            >
+              <i class="ph-bold ph-chat-circle-dots text-2xl"></i>
+              Chat with Gali
+            </a>
+          </div>
         </div>
       </div>
     </section>
-    <main class="p-10 relative -mt-10 z-3 bg-krem rounded-t-[50px]">
+    <main class="px-25 py-10 relative -mt-10 z-3 bg-krem rounded-t-[50px] mb-0">
       <!-- situation  -->
-      <section class="mt-25">
+      <section class="mt-50">
         <hgroup class="flex justify-between items-end">
           <div class="flex flex-col">
             <p
@@ -516,7 +567,7 @@
           ></a>
         </hgroup>
         <div
-          class="my-10 grid w-full gap-6 grid-cols-[2fr_1fr_1fr] grid-rows-[1fr_1fr]"
+          class="my-10 grid w-full gap-6 grid-cols-[2fr_1fr_1fr] grid-rows-[1fr_1fr] max-md:"
         >
           <div
             class="h-fit relative overflow-hidden rounded-4xl bg-terakota p-10 text-white row-span-2"
@@ -567,7 +618,7 @@
                     <p class="text-lg font-semibold leading-6 text-nila">
                       Berapa harganya?
                     </p>
-                    <p class="text-[13px] leading-4.5 text-nila/65">
+                    <p class="text-[13px] leading-4.5 text-nila/80">
                       How much is this?
                     </p>
                   </div>
@@ -585,7 +636,7 @@
                     <p class="text-lg font-semibold leading-6 text-nila">
                       Boleh kurang?
                     </p>
-                    <p class="text-[13px] leading-4.5 text-nila/65">
+                    <p class="text-[13px] leading-4.5 text-nila/80">
                       Can it be cheaper?
                     </p>
                   </div>
@@ -603,7 +654,7 @@
                     <p class="text-lg font-semibold leading-6 text-nila">
                       Terima kasih, Bu!
                     </p>
-                    <p class="text-[13px] leading-4.5 text-nila/65">
+                    <p class="text-[13px] leading-4.5 text-nila/80">
                       Thank you, ma’am!
                     </p>
                   </div>
@@ -639,7 +690,7 @@
               >
                 SCHOOL
               </h3>
-              <p class="text-nila/85 text-sm font-semibold">
+              <p class="text-nila/80 text-sm font-semibold">
                 In class & with teachers · 8 phrases
               </p>
             </div>
@@ -657,7 +708,7 @@
               >
                 PUBLIC TRANSIT
               </h3>
-              <p class="text-nila/85 text-sm font-semibold">
+              <p class="text-nila/80 text-sm font-semibold">
                 Getting around town · 8 phrases
               </p>
             </div>
@@ -677,7 +728,7 @@
               >
                 introduction
               </h3>
-              <p class="text-nila/85 text-sm font-semibold">
+              <p class="text-nila/80 text-sm font-semibold">
                 Meeting new people · 8 phrases
               </p>
             </div>
@@ -703,7 +754,7 @@
         </div>
       </section>
       <!-- how it works section -->
-      <section class="mt-25">
+      <section class="mt-50">
         <hgroup class="flex flex-col">
           <p
             class="px-3.5 py-1.75 bg-matahari rounded-full w-fit font-semibold tracking-wide text-nila uppercase text-sm"
@@ -768,7 +819,7 @@
             </a>
           </div>
           <!-- 01 -->
-          <div class="p-10 hidden flex-col gap-6 bg-white w-full rounded-4xl">
+          <div class="p-10 flex flex-col gap-6 bg-white w-full rounded-4xl">
             <p class="text-xs text-nila">STEP 1 · PICK YOUR PLACE</p>
             <h3 class="text-3xl font-bold text-nila">Where are you today?</h3>
             <div class="grid grid-cols-3 gap-3">
@@ -831,7 +882,7 @@
             </div>
           </div>
           <!-- 03 -->
-          <div class="p-10 flex flex-col gap-6 bg-white w-full rounded-4xl">
+          <div class="p-10 hidden flex-col gap-6 bg-white w-full rounded-4xl">
             <p class="text-xs text-terakota uppercase">
               STEP 3 · QUIZ WITH GALI
             </p>
@@ -910,7 +961,7 @@
         </div>
       </section>
       <!-- PHRASE OF THE DAY -->
-      <section class="mt-25 p-10 bg-nila rounded-4xl">
+      <section class="mt-50 p-10 bg-nila rounded-4xl">
         <hgroup class="flex justify-between items-center mb-8">
           <p class="text-matahari uppercase font-bold tracking-wider">
             PHRASE OF THE DAY
@@ -992,32 +1043,673 @@
         </div>
       </section>
       <!-- why gaulingo -->
-      <section class="mt-25">
-        <hgroup class="flex justify-between items-end">
-          <div class="flex flex-col">
+      <section class="mt-50">
+        <hgroup class="flex flex-col xl:w-1/2">
+          <p
+            class="px-3.5 py-1.75 bg-biru-aksen/25 rounded-full w-fit font-semibold tracking-wide text-nila text-sm"
+          >
+            WHY GAULINGO
+          </p>
+          <h2 class="text-nila text-[52px] font-semibold tracking-[-0.52px]">
+            Not your usual
+            <span class="text-biru-aksen font-unbounded font-black"
+              >PHRASEBOOK</span
+            >
+          </h2>
+          <p class="text-lg text-nila/80 font-medium">
+            Most phrasebooks teach sentences nobody says. Gaulingo teaches what
+            people actually say, and how to say it politely.
+          </p>
+        </hgroup>
+        <div class="flex gap-6 mt-5">
+          <div
+            class="bg-krem-tua rounded-3xl p-8 sm:p-10 flex flex-col gap-6 grow"
+          >
+            <h3 class="text-xl sm:text-3xl font-bold text-nila/80">
+              Usual phrasebook
+            </h3>
+
+            <ul class="flex flex-col gap-4">
+              <li
+                class="flex items-center gap-3 text-sm sm:text-base font-semibold text-nila"
+              >
+                <span
+                  class="p-1 rounded-full bg-matahari flex items-center justify-center"
+                >
+                  <i class="ph-bold ph-x"></i>
+                </span>
+                <p>Textbook sentences nobody says</p>
+              </li>
+
+              <li
+                class="flex items-center gap-3 text-sm sm:text-base font-semibold text-nila"
+              >
+                <span
+                  class="p-1 rounded-full bg-matahari flex items-center justify-center"
+                >
+                  <i class="ph-bold ph-x"></i>
+                </span>
+                <p>Read only, no audio</p>
+              </li>
+
+              <li
+                class="flex items-center gap-3 text-sm sm:text-base font-semibold text-nila"
+              >
+                <span
+                  class="p-1 rounded-full bg-matahari flex items-center justify-center"
+                >
+                  <i class="ph-bold ph-x"></i>
+                </span>
+                <p>No context or manners</p>
+              </li>
+
+              <li
+                class="flex items-center gap-3 text-sm sm:text-base font-semibold text-nila"
+              >
+                <span
+                  class="p-1 rounded-full bg-matahari flex items-center justify-center"
+                >
+                  <i class="ph-bold ph-x"></i>
+                </span>
+                <p>One language only</p>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="bg-nila rounded-3xl p-8 sm:p-10 flex flex-col grow gap-6 text-white"
+          >
+            <h3
+              class="text-xl sm:text-3xl font-black font-unbounded tracking-wider"
+            >
+              GAULINGO
+            </h3>
+
+            <ul class="flex flex-col gap-4">
+              <li
+                class="flex items-center gap-3 text-sm sm:text-base font-semibold"
+              >
+                <span
+                  class="w-5 h-5 rounded-full bg-matahari text-nila flex items-center justify-center shrink-0"
+                >
+                  <svg
+                    class="w-3 h-3 stroke-current"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span>Everyday phrases locals actually use</span>
+              </li>
+
+              <li
+                class="flex items-center gap-3 text-sm sm:text-base font-semibold"
+              >
+                <span
+                  class="w-5 h-5 rounded-full bg-matahari text-nila flex items-center justify-center shrink-0"
+                >
+                  <svg
+                    class="w-3 h-3 stroke-current"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span>Audio for every phrase, with slow mode</span>
+              </li>
+
+              <li
+                class="flex items-center gap-3 text-sm sm:text-base font-semibold"
+              >
+                <span
+                  class="w-5 h-5 rounded-full bg-matahari text-nila flex items-center justify-center shrink-0"
+                >
+                  <svg
+                    class="w-3 h-3 stroke-current"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span>A culture tip in every situation</span>
+              </li>
+
+              <li
+                class="flex items-center gap-3 text-sm sm:text-base font-semibold"
+              >
+                <span
+                  class="w-5 h-5 rounded-full bg-matahari text-nila flex items-center justify-center shrink-0"
+                >
+                  <svg
+                    class="w-3 h-3 stroke-current"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span>Bahasa Indonesia, Sunda &amp; Jawa</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- AI buddy -->
+      <section
+        class="flex mt-50 p-10 gap-20 bg-pasir rounded-4xl justify-between items-center"
+      >
+        <div class="flex flex-col gap-5">
+          <hgroup class="flex flex-col">
             <p
               class="px-3.5 py-1.75 bg-biru-aksen/25 rounded-full w-fit font-semibold tracking-wide text-nila text-sm"
             >
-              WHY GAULINGO
+              AI BUDDY
             </p>
             <h2 class="text-nila text-[52px] font-semibold tracking-[-0.52px]">
-              Not your usual
+              Stuck? Just ask
               <span class="text-biru-aksen font-unbounded font-black"
-                >PHRASEBOOK</span
+                >GALI.</span
               >
             </h2>
             <p class="text-lg text-nila/80 font-medium">
-              Most phrasebooks teach sentences nobody says. Gaulingo teaches
-              what people actually say, and how to say it politely.
+              Ask how to say something, what a word means, or whether it sounds
+              polite. Gali answers in simple English and Bahasa Indonesia, with
+              audio.
             </p>
+          </hgroup>
+          <p>Try asking</p>
+          <div class="flex gap-5 flex-wrap">
+            <button class="px-4 py-2 bg-white rounded-full text-nila font-bold">
+              How do I say "no spicy"?
+            </button>
+            <button class="px-4 py-2 bg-white rounded-full text-nila font-bold">
+              Is "Bang" polite?
+            </button>
+            <button class="px-4 py-2 bg-white rounded-full text-nila font-bold">
+              Teach me to bargain
+            </button>
+            <button class="px-4 py-2 bg-white rounded-full text-nila font-bold">
+              What does "gas" mean?
+            </button>
           </div>
           <a
             href="#"
-            class="flex px-5 py-3 items-center gap-2 rounded-full border-[1.5px] border-nila/50 text-nila font-semibold w-fit"
-            >See all 6 situations<i class="ph-bold ph-arrow-right"></i
-          ></a>
-        </hgroup>
+            class="px-6 py-3 bg-nila text-white rounded-full w-fit text-lg flex items-center gap-2"
+            ><i class="ph-fill ph-chat-circle-dots"></i> Start chatting</a
+          >
+          <p class="text-sm text-nila">
+            Gali can make mistakes. Check important info with a local.
+          </p>
+        </div>
+        <div>
+          <img src="./src/assets/gali-chat.webp" alt="Chat with gali" />
+        </div>
       </section>
+      <!-- FAQ -->
+      <section class="mt-50">
+        <hgroup class="relative w-full mb-10 flex flex-col">
+          <p
+            class="px-3.5 py-1.75 bg-biru-aksen/25 rounded-full w-fit font-semibold tracking-wide text-nila text-sm"
+          >
+            FAQ
+          </p>
+          <h2
+            class="relative w-fit text-nila text-[52px] font-unbounded font-black tracking-[-0.52px]"
+          >
+            STILL GOT
+            <span class="text-terakota">QUESTIONS?</span>
+            <svg
+              class="absolute -bottom-2 left-0 w-full"
+              viewBox="0 0 200 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 6C50 2 150 2 198 6"
+                stroke="#fbe3b5"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+            </svg>
+          </h2>
+          <i
+            class="ph ph-question-mark text-7xl text-nila/20 absolute right-0 bottom-0"
+          ></i>
+        </hgroup>
+        <div class="gap-y-4">
+          <div class="border-y border-nila/30 py-7">
+            <button
+              class="w-full flex items-center justify-between text-left py-2 group"
+            >
+              <div class="flex items-center gap-6">
+                <p class="font-bold text-nila/80">01</p>
+                <h3 class="text-3xl font-bold text-nila">What is Gaulingo?</h3>
+              </div>
+              <a
+                class="w-8 h-8 rounded-full bg-nila text-white flex items-center justify-center font-bold text-lg"
+              >
+                -
+              </a>
+            </button>
+            <div
+              id="content-1"
+              class="mt-3 bg-pasir p-5 rounded-2xl flex items-center gap-4"
+            >
+              <img
+                src="./src/assets/Illustration.png"
+                alt="Gali Avatar"
+                class="w-10 h-10 rounded-full bg-amber-800 shrink-0 overflow-hidden"
+              />
+              <div>
+                <p
+                  class="text-xs font-bold tracking-wider uppercase text-nila/80 mb-1"
+                >
+                  Gali's Answer
+                </p>
+                <p class="text-sm text-nila font-medium">
+                  A free website with everyday Indonesian phrases for real
+                  situations — warung, school, angkot, even emergencies. Every
+                  phrase comes with audio, a culture tip, and a short quiz. Gali
+                  is one tap away if you get stuck.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="border-b border-nila/30 py-7">
+            <button
+              class="w-full flex items-center justify-between text-left py-2 group"
+            >
+              <div class="flex items-center gap-6">
+                <p class="font-bold text-nila/80">02</p>
+                <h3 class="text-3xl font-bold text-nila">
+                  Do I need an account?
+                </h3>
+              </div>
+              <a
+                class="w-8 h-8 rounded-full border border-nila/20 flex items-center justify-center font-bold text-lg"
+              >
+                +
+              </a>
+            </button>
+            <div
+              id="content-1"
+              class="mt-3 bg-pasir p-5 rounded-2xl hidden items-center gap-4"
+            >
+              <img
+                src="./src/assets/Illustration.png"
+                alt="Gali Avatar"
+                class="w-10 h-10 rounded-full bg-amber-800 shrink-0 overflow-hidden"
+              />
+              <div>
+                <p
+                  class="text-xs font-bold tracking-wider uppercase text-nila/80 mb-1"
+                >
+                  Gali's Answer
+                </p>
+                <p class="text-sm text-nila font-medium">
+                  A free website with everyday Indonesian phrases for real
+                  situations — warung, school, angkot, even emergencies. Every
+                  phrase comes with audio, a culture tip, and a short quiz. Gali
+                  is one tap away if you get stuck.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="border-b border-nila/30 py-7">
+            <button
+              class="w-full flex items-center justify-between text-left py-2 group"
+            >
+              <div class="flex items-center gap-6">
+                <p class="font-bold text-nila/80">03</p>
+                <h3 class="text-3xl font-bold text-nila">
+                  Which languages are included?
+                </h3>
+              </div>
+              <a
+                class="w-8 h-8 rounded-full border border-nila/20 flex items-center justify-center font-bold text-lg"
+              >
+                +
+              </a>
+            </button>
+            <div
+              id="content-1"
+              class="mt-3 bg-pasir p-5 rounded-2xl hidden items-center gap-4"
+            >
+              <img
+                src="./src/assets/Illustration.png"
+                alt="Gali Avatar"
+                class="w-10 h-10 rounded-full bg-amber-800 shrink-0 overflow-hidden"
+              />
+              <div>
+                <p
+                  class="text-xs font-bold tracking-wider uppercase text-nila/80 mb-1"
+                >
+                  Gali's Answer
+                </p>
+                <p class="text-sm text-nila font-medium">
+                  A free website with everyday Indonesian phrases for real
+                  situations — warung, school, angkot, even emergencies. Every
+                  phrase comes with audio, a culture tip, and a short quiz. Gali
+                  is one tap away if you get stuck.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="border-b border-nila/30 py-7">
+            <button
+              class="w-full flex items-center justify-between text-left py-2 group"
+            >
+              <div class="flex items-center gap-6">
+                <p class="font-bold text-nila/80">04</p>
+                <h3 class="text-3xl font-bold text-nila">
+                  Does it work on my phone?
+                </h3>
+              </div>
+              <a
+                class="w-8 h-8 rounded-full border border-nila/20 flex items-center justify-center font-bold text-lg"
+              >
+                +
+              </a>
+            </button>
+            <div
+              id="content-1"
+              class="mt-3 bg-pasir p-5 rounded-2xl hidden items-center gap-4"
+            >
+              <img
+                src="./src/assets/Illustration.png"
+                alt="Gali Avatar"
+                class="w-10 h-10 rounded-full bg-amber-800 shrink-0 overflow-hidden"
+              />
+              <div>
+                <p
+                  class="text-xs font-bold tracking-wider uppercase text-nila/80 mb-1"
+                >
+                  Gali's Answer
+                </p>
+                <p class="text-sm text-nila font-medium">
+                  A free website with everyday Indonesian phrases for real
+                  situations — warung, school, angkot, even emergencies. Every
+                  phrase comes with audio, a culture tip, and a short quiz. Gali
+                  is one tap away if you get stuck.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="border-b border-nila/30 py-7">
+            <button
+              class="w-full flex items-center justify-between text-left py-2 group"
+            >
+              <div class="flex items-center gap-6">
+                <p class="font-bold text-nila/80">05</p>
+                <h3 class="text-3xl font-bold text-nila">
+                  Who checks the translations?
+                </h3>
+              </div>
+              <a
+                class="w-8 h-8 rounded-full border border-nila/20 flex items-center justify-center font-bold text-lg"
+              >
+                +
+              </a>
+            </button>
+            <div
+              id="content-1"
+              class="mt-3 bg-pasir p-5 rounded-2xl hidden items-center gap-4"
+            >
+              <img
+                src="./src/assets/Illustration.png"
+                alt="Gali Avatar"
+                class="w-10 h-10 rounded-full bg-amber-800 shrink-0 overflow-hidden"
+              />
+              <div>
+                <p
+                  class="text-xs font-bold tracking-wider uppercase text-nila/80 mb-1"
+                >
+                  Gali's Answer
+                </p>
+                <p class="text-sm text-nila font-medium">
+                  A free website with everyday Indonesian phrases for real
+                  situations — warung, school, angkot, even emergencies. Every
+                  phrase comes with audio, a culture tip, and a short quiz. Gali
+                  is one tap away if you get stuck.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="border-b border-nila/30 py-7">
+            <button
+              class="w-full flex items-center justify-between text-left py-2 group"
+            >
+              <div class="flex items-center gap-6">
+                <p class="font-bold text-nila/80">06</p>
+                <h3 class="text-3xl font-bold text-nila">Is Gaulingo free?</h3>
+              </div>
+              <a
+                class="w-8 h-8 rounded-full border border-nila/20 flex items-center justify-center font-bold text-lg"
+              >
+                +
+              </a>
+            </button>
+            <div
+              id="content-1"
+              class="mt-3 bg-pasir p-5 rounded-2xl hidden items-center gap-4"
+            >
+              <img
+                src="./src/assets/Illustration.png"
+                alt="Gali Avatar"
+                class="w-10 h-10 rounded-full bg-amber-800 shrink-0 overflow-hidden"
+              />
+              <div>
+                <p
+                  class="text-xs font-bold tracking-wider uppercase text-nila/80 mb-1"
+                >
+                  Gali's Answer
+                </p>
+                <p class="text-sm text-nila font-medium">
+                  A free website with everyday Indonesian phrases for real
+                  situations — warung, school, angkot, even emergencies. Every
+                  phrase comes with audio, a culture tip, and a short quiz. Gali
+                  is one tap away if you get stuck.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-10 bg-nila text-white rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md"
+        >
+          <div class="flex items-center gap-4">
+            <div
+              class="w-12 h-12 rounded-full bg-amber-700 overflow-hidden shrink-0"
+            >
+              <img
+                src="./src/assets/Illustration.png"
+                alt="Gali Avatar"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h4 class="font-bold text-base">Question not listed here?</h4>
+              <p class="text-xs text-blue-200">
+                Ask Gali directly — he answers in English and Bahasa Indonesia.
+              </p>
+            </div>
+          </div>
+          <button
+            class="bg-matahari text-nila px-5 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-amber-200 transition"
+          >
+            <i class="ph-fill ph-chat-circle-dots"></i>
+            Ask Gali
+          </button>
+        </div>
+      </section>
+      <!-- CTA -->
+      <section
+        class="bg-nila rounded-3xl relative p-10 text-white flex flex-row items-center justify-between gap-8 mt-50"
+      >
+        <div class="relative z-1 flex flex-col gap-4 w-full">
+          <h2 class="text-6xl font-black tracking-tight">
+            Ready to <span class="text-matahari font-unbounded">NGOBROL</span>?
+          </h2>
+          <p class="text-lg font-medium leading-relaxed">
+            Free, no sign-up, works on any phone. Start with one phrase today.
+          </p>
+          <div class="flex items-center gap-3 pt-2 flex-wrap">
+            <a
+              href="#"
+              class="inline-flex items-center gap-2 bg-matahari text-nila font-bold text-base px-6 py-4 rounded-full"
+            >
+              Start exploring <i class="ph-bold ph-arrow-right text-base"></i>
+            </a>
+            <a
+              href="#"
+              class="inline-flex items-center gap-2 border border-white/40 text-white font-semibold text-base px-6 py-3.5 rounded-full hover:bg-white/10 transition duration-200"
+            >
+              <i class="ph-bold ph-chat-circle-dots text-lg"></i> Chat with Gali
+            </a>
+          </div>
+        </div>
+        <div class="relative w-105 h-80 flex justify-end items-center shrink-0">
+          <div
+            class="absolute right-0 top-1/2 -translate-y-1/2 w-85 h-85 bg-matahari rounded-full z-0 overflow-hidden"
+          >
+            <img
+              src="./src/assets/cta-image.png"
+              alt="gali image"
+              class="absolute pt-10"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- footer -->
+      <footer
+        class="mt-50 bg-nila rounded-3xl overflow-hidden relative p-10 text-white flex flex-col justify-between gap-12"
+      >
+        <div
+          class="absolute -right-20 -bottom-20 w-150 h-150 bg-white/10 rounded-full z-1"
+        ></div>
+
+        <div class="relative z-10 flex flex-col gap-6">
+          <p class="text-matahari uppercase font-bold tracking-widest text-sm">
+            GAULINGO · 2026
+          </p>
+          <div
+            class="flex justify-between gap-4 items-center text-7xl font-unbounded font-black tracking-[-2.04] uppercase"
+          >
+            <h2>SAY IT</h2>
+            <h2>LIKE A</h2>
+            <h2>LOCAL.</h2>
+          </div>
+          <p
+            class="text-base sm:text-lg text-white/85 font-medium max-w-md pt-2"
+          >
+            Everyday Indonesian phrases for real places. Free, no sign-up.
+          </p>
+          <div class="flex items-center gap-4 flex-wrap pt-2">
+            <a
+              href="#"
+              class="inline-flex items-center gap-2 bg-[#fde4b8] text-[#2d539e] font-bold text-base px-6 py-3.5 rounded-full hover:bg-opacity-90 transition duration-200"
+            >
+              Start exploring <i class="ph-bold ph-arrow-right text-base"></i>
+            </a>
+
+            <!-- Ikon Sosial Media Ring -->
+            <div class="flex items-center gap-2">
+              <a
+                href="#"
+                class="w-11 h-11 rounded-full border border-white/30 text-white flex items-center justify-center hover:bg-white/10 transition duration-200"
+                aria-label="Instagram"
+              >
+                <i class="ph-bold ph-instagram-logo text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="w-11 h-11 rounded-full border border-white/30 text-white flex items-center justify-center hover:bg-white/10 transition duration-200"
+                aria-label="TikTok"
+              >
+                <i class="ph-bold ph-tiktok-logo text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="w-11 h-11 rounded-full border border-white/30 text-white flex items-center justify-center hover:bg-white/10 transition duration-200"
+                aria-label="YouTube"
+              >
+                <i class="ph-bold ph-youtube-logo text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="w-11 h-11 rounded-full border border-white/30 text-white flex items-center justify-center hover:bg-white/10 transition duration-200"
+                aria-label="Email"
+              >
+                <i class="ph-bold ph-envelope text-xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative z-10 pt-6 border-t border-white/20 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-xs sm:text-sm text-white/70"
+        >
+          <p>© 2026 Gaulingo · IDN IT Fest 2026</p>
+          <nav class="flex gap-6 flex-wrap font-medium">
+            <a href="#" class="hover:text-white transition">Situations</a>
+            <a href="#" class="hover:text-white transition">Practice</a>
+            <a href="#" class="hover:text-white transition">Culture</a>
+            <a href="#" class="hover:text-white transition">About</a>
+          </nav>
+        </div>
+        <div
+          class="relative w-full overflow-hidden leading-none select-none pointer-events-none pt-4 -mb-6 sm:-mb-10"
+        >
+          <span
+            class="block text-center font-black text-[15vw] tracking-tighter text-white/10 uppercase leading-none"
+          >
+            GAULINGO
+          </span>
+        </div>
+      </footer>
     </main>
+    <div
+      class="flex flex-row-reverse items-center gap-2 fixed bottom-15 right-7 z-50"
+    >
+      <img
+        src="./src/assets/Illustration.png"
+        alt="gali ilustration"
+        class="w-15 border-4 border-nila rounded-full shadow-xl"
+      />
+      <p
+        class="px-4 py-2 bg-white rounded-full font-bold text-nila shadow-xl text-sm"
+      >
+        Ask Gali
+      </p>
+    </div>
+    <script>
+      const nav = document.getElementById("nav");
+      const toggleNav = () =>
+        nav.toggleAttribute("data-shown", window.scrollY > 50);
+      window.addEventListener("scroll", toggleNav, { passive: true });
+      toggleNav();
+
+      // nav
+      const menu = document.getElementById("menu");
+      function openMenu() {
+        menu.classList.replace("hidden", "flex");
+      }
+      function closeMenu() {
+        menu.classList.replace("flex", "hidden");
+      }
+    </script>
   </body>
 </html>
